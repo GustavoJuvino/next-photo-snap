@@ -6,6 +6,14 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    extend: {
+      letterSpacing: {
+        widest: ".22em"
+      },
+      colors: {
+        "light-gray": "#DFDFDF"
+      }
+    }
   },
   plugins: [],
 }

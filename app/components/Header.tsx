@@ -1,8 +1,11 @@
 import Image from "next/image"
+import Button from "./Button"
+
+let headerItems = ["STORIES", "FEATURES", "PRICING"];
 
 const Header = () => {
   return (
-    <div className="flex justify-between mt-7 ml-40 mr-40">
+    <div className="flex justify-between mt-7 ml-40 mr-40 items-center">
         <div>
             <Image
                 className="w-auto h-auto"
@@ -13,12 +16,19 @@ const Header = () => {
                 priority={true}
             />
         </div>
-        <ul className="flex">
-            <li className="mr-9">STORIES</li>
-            <li className="mr-9">FEATURES</li>
-            <li className="mr-9">PRICING</li>
+        <ul 
+          className="flex font-bold tracking-widest text-sm">
+            {headerItems.map((item) => (
+              <li className="hover:text-light-gray mx-6 cursor-pointer duration-300">
+                {item}
+              </li>
+            ))}
         </ul>
-        <button>GET AN INVITE</button>
+      <Button
+        type={1}
+        value="GET AN INVITE"
+        background={true}
+      />
     </div>
   )
 }
