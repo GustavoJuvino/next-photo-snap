@@ -27,9 +27,10 @@ const Button: React.FC<ButtonProps> = ({
             font-bold
             tracking-widest 
             duration-300
+            select-none
             hover:bg-light-gray
             hover:text-black
-            ${size === "default" ? "w-40 h-10" : "w-[310px] h-12"}
+            ${size === "xl" ? "w-[310px] h-12" : "w-40 h-10"}
             ${background ? "bg-black" : "bg-light-gray"}
             ${color === "black" ? "text-black" : "text-white"}
             ${type === 2 && `

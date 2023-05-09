@@ -7,7 +7,7 @@ export let headerItems = ["STORIES", "FEATURES", "PRICING"];
 const Header = () => {
 
   return (
-    <div className="flex flex-wrap justify-between mt-7 mx-10 lg:mx-40 items-center">
+    <div className="flex justify-between mt-7 mx-10 lg:mx-40 items-center">
         <div>
             <Image
                 className="w-auto h-auto"

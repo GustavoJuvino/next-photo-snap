@@ -12,6 +12,12 @@ module.exports = {
       },
       colors: {
         "light-gray": "#DFDFDF"
+      },
+      keyframes: {
+        mobileMenu: {
+          'from': { opacity: '0' },
+          'to': { opacity: 'initial' },
+        }
       }
     }
   },

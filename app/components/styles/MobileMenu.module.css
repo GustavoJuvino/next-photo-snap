@@ -7,6 +7,12 @@
     cursor: pointer;
 }
 
+@media  (min-width: 768px) {
+    .mobileButton {
+        display: none;
+    }
+}
+
 #hamburger {
     color: black;
     display: block;
@@ -27,7 +33,7 @@
 }
 
 .active::after {
-    transform: rotate(-95deg);
+    transform: rotate(-90deg);
     top: -7px;
 }   
 
