@@ -5,14 +5,16 @@ import React from 'react';
 interface ButtonProps {
     value: string;
     type: number;
+    size?: string;
     color: string;
     background: boolean;
-    responsive: string;
+    responsive?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
     value,
     type,
+    size,
     color,
     background,
     responsive
@@ -21,14 +23,13 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button 
         className={`
-            w-40
-            h-10
             text-xs
             font-bold
             tracking-widest 
             duration-300
             hover:bg-light-gray
             hover:text-black
+            ${size === "default" ? "w-40 h-10" : "w-[310px] h-12"}
             ${background ? "bg-black" : "bg-light-gray"}
             ${color === "black" ? "text-black" : "text-white"}
             ${type === 2 && `

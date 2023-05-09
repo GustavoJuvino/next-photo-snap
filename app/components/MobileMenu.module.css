@@ -7,14 +7,15 @@
     cursor: pointer;
 }
 
-.hamburger {
+#hamburger {
     color: black;
     display: block;
     border-top: 2px solid;
     width: 30px;
+    
 }
 
-.hamburger::after{
+#hamburger::after{
     content: "";
     display: block;
     width: 30px;
@@ -24,3 +25,12 @@
     transition: .3s;
     position: relative;
 }
+
+.active::after {
+    transform: rotate(-95deg);
+    top: -7px;
+}   
+
+.active {
+    transform: rotate(135deg);
+}   
