@@ -1,11 +1,12 @@
-import Image from "next/image"
-import Button from "./Button"
+import Image from "next/image";
+import Button from "./Button";
+import styles from "./Header.module.css";
 
 let headerItems = ["STORIES", "FEATURES", "PRICING"];
 
 const Header = () => {
   return (
-    <div className="flex justify-between mt-7 ml-40 mr-40 items-center">
+    <div className="flex justify-between mt-7 mx-10 lg:mx-40 items-center">
         <div>
             <Image
                 className="w-auto h-auto"
@@ -16,19 +17,25 @@ const Header = () => {
                 priority={true}
             />
         </div>
-        <ul 
-          className="flex font-bold tracking-widest text-sm">
-            {headerItems.map((item) => (
-              <li className="hover:text-light-gray mx-6 cursor-pointer duration-300">
-                {item}
-              </li>
-            ))}
+        <ul className="hidden md:flex font-bold tracking-widest text-sm">
+          {headerItems.map((item) => (
+            <li className="hover:text-light-gray mx-6 cursor-pointer duration-300">
+              {item}
+            </li>
+          ))}
         </ul>
       <Button
         type={1}
         value="GET AN INVITE"
+        color="white"
         background={true}
+        responsive="md"
       />
+      
+      {/* Mobile Menu */}
+      <div className={styles.mobileButton}>
+        <span className={styles.hamburger}></span>
+      </div>
     </div>
   )
 }
