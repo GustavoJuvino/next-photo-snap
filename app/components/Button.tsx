@@ -7,7 +7,7 @@ interface ButtonProps {
     type: number;
     size?: string;
     color: string;
-    background: boolean;
+    background?: boolean;
     responsive?: string;
 }
 
@@ -28,13 +28,15 @@ const Button: React.FC<ButtonProps> = ({
             tracking-widest 
             duration-300
             select-none
-            hover:bg-light-gray
-            hover:text-black
             ${size === "xl" ? "w-[310px] h-12" : "w-40 h-10"}
-            ${background ? "bg-black" : "bg-light-gray"}
+            ${background ? "bg-black" : "bg-white"}
             ${color === "black" ? "text-black" : "text-white"}
+            ${type === 1 && `
+                hover:bg-light-gray
+                hover:text-black
+            `}
             ${type === 2 && `
-                w-52
+                w-44
                 bg-transparent
                 text-left
                 hover:bg-transparent
@@ -47,10 +49,10 @@ const Button: React.FC<ButtonProps> = ({
             <div className="flex justify-between">
                 <p>{value}</p>
                 <Image
-                    src={"assets/arrow.svg"}
                     width={42}
                     height={12}
                     alt="Arrow"
+                    src={color === "black" ? "assets/arrow-black.svg" : "assets/arrow-white.svg"}
                 />
             </div>
         ) : 
