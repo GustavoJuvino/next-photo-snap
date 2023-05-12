@@ -2,9 +2,10 @@ import React from "react";
 
 interface GradientProps {
   size: string;
+  responsible?: boolean;
 }
 
-const Gradient: React.FC<GradientProps> = ({ size }) => {
+const Gradient: React.FC<GradientProps> = ({ size, responsible }) => {
   return (
     <div className={`
         absolute
@@ -14,6 +15,7 @@ const Gradient: React.FC<GradientProps> = ({ size }) => {
         ${size === "sm" && "h-36"}
         ${size === "md" && "h-[280px]"}
         ${size === "xl" && "h-[19rem]"}
+        ${responsible && "max-md:w-32 max-md:h-[6px] max-md:top-0 max-md:mx-10"}
       `}
     />
   )

@@ -49,6 +49,7 @@ const Button: React.FC<ButtonProps> = ({
             <div className="flex justify-between">
                 <p>{value}</p>
                 <Image
+                    className="w-auto h-auto"
                     width={42}
                     height={12}
                     alt="Arrow"

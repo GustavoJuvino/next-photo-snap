@@ -12,6 +12,10 @@ module.exports = {
           lineHeight: "48px",
           letterSpacing: "0.25rem",
           fontWeight: "bold",
+        }],
+        "l": ["32px", {
+          lineHeight: "48px",
+          fontWeight: "bold",
         }]
       },
       letterSpacing: {
@@ -20,6 +24,9 @@ module.exports = {
       colors: {
         "light-gray": "#DFDFDF",
         "custom-gradiant": "from-[#FEC393] via-[#BC7198] to-[#5A77FF]",
+      },
+      screen: {
+        mobile: "382px"
       },
       keyframes: {
         mobileMenu: {

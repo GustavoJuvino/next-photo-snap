@@ -6,38 +6,61 @@ export default async function Home() {
 
   return (
     <main>
-      <section className="flex mt-7">
-        <div className="flex w-[50rem] h-[48rem] bg-black text-white">
-          <div className="flex flex-col text-left py-52 ml-40">
-              <Gradient size="xl" />
-              <h1 className="text-xxl text-light-gray mb-5">
-                CREATE AND <br />
-                SHARE YOUR <br />
-                PHOTO STORIES.
-              </h1>
-              <p className="leading-6 opacity-60 mb-12">
-                Photosnap is a platform for photographers and visual<br />
-                storytellers. We make it easy to share photos, tell<br />
-                stories and connect with others.<br />
-              </p>
-              <Button 
-                type={2}
-                value="GET AN INVITE"
-                color="white"
-                background={true}
-              />
-          </div>
+      <section className="flex max-md:flex-col-reverse mt-7 z-1">
+        <div 
+          className="
+            md:w-[50rem]
+            md:h-[48rem]
+            h-[30rem]
+            w-[100%]
+            flex
+            relative
+            md:justify-center
+            items-center
+            lg:px-40
+            px-10
+            bg-black
+            text-white
+          "
+        >
+            <div className="text-left">
+                <Gradient size="xl" responsible={true} />
+                <h1 className="mobile:text-xxl text-l text-light-gray mb-5">
+                  CREATE AND <br />
+                  SHARE YOUR <br />
+                  PHOTO STORIES.
+                </h1>
+                <p className="leading-6 opacity-60 mb-12">
+                  Photosnap is a platform for photographers and visual<br />
+                  storytellers. We make it easy to share photos, tell<br />
+                  stories and connect with others.<br />
+                </p>
+                <Button 
+                  type={2}
+                  value="GET AN INVITE"
+                  color="white"
+                  background={true}
+                />
+            </div>
         </div>
           <Image 
-              className="w-[69rem] h-[48rem]"
               width={850}
               height={650}
               src={"/assets/create-and-share.jpg"}
               alt="create-and-share"
+              className=" 
+                lg:w-[60%]
+                md:w-[273px]
+                md:h-[768px]
+                w-[100vw]
+                h-[450px]
+                object-cover
+                object-bottom
+              "
             />
       </section>
 
-      <section className="flex">
+      {/* <section className="flex">
         <Image 
           className="w-[980px] h-auto"
           width={980}
@@ -45,7 +68,7 @@ export default async function Home() {
           src={"/assets/beautiful-stories.jpg"}
           alt="beautiful-stories"
         />
-        <div className="w-[57rem] flex justify-center mt-10">
+        <div className="w-[57rem] flex justify-center">
           <div className="text-left">
             <h1 className="text-xxl mt-40">
               BEAUTIFUL <br />
@@ -67,7 +90,7 @@ export default async function Home() {
       </section>
 
       <section className="flex justify-between text-center">
-        <div className="w-[57rem] flex justify-center mt-10">
+        <div className="w-[57rem] flex justify-center">
           <div className="text-left">
             <h1 className="text-xxl mt-40">
               DESIGNED FOR <br />
@@ -93,7 +116,7 @@ export default async function Home() {
             src={"/assets/designed-for-everyone.jpg"}
             alt="designed-for-everyone"
         />
-      </section>
+      </section> */}
     </main>
   )
 }
