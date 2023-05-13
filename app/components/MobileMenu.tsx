@@ -9,7 +9,7 @@ const MobileMenu = () => {
 
   return (
     <section>
-        <div className={active ? "absolute top-[70px] left-0 z-10 w-[100%] h-[100%] bg-black bg-opacity-50" : ""}></div>
+        <div className={active ? "absolute top-[70px] left-0 z-10 w-[100%] h-[300vh] bg-black bg-opacity-50" : ""}></div>
         <div className={styles.mobileButton}>
             <span 
                 id={styles.hamburger} 
@@ -24,7 +24,7 @@ const MobileMenu = () => {
                 md:hidden
                 absolute
                 z-20
-                w-screen
+                w-[100%]
                 h-72
                 left-0
                 mt-7
