@@ -23,7 +23,7 @@ const Main: React.FC<MainProps> = ({
     buttonValue = ""
 }) => {
   return (
-    <section className="flex max-md:flex-col-reverse mt-7 z-1">
+    <section className="flex max-md:flex-col-reverse mt-7">
         <div className="
             md:w-[50rem]
             md:h-[48rem]
@@ -39,7 +39,7 @@ const Main: React.FC<MainProps> = ({
             text-white
         "
         >
-            <div className="text-left">
+            <div className="text-left w-[400px]">
                 <Gradient size={gradientSize} responsible={true} />
                 {!title ? (
                     <h1 className="mobile:text-xxl text-l text-light-gray mb-5">
@@ -73,7 +73,8 @@ const Main: React.FC<MainProps> = ({
                 w-[100vw]
                 h-[450px]
                 object-cover
-                object-bottom
+                bg-center
+                overflow-x-hidden
             "
         />
     </section>

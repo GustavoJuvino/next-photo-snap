@@ -1,7 +1,6 @@
+import Main from "./components/Main";
 import Image from "next/image";
 import Button from "./components/Button";
-import Gradient from "./components/Gradient";
-import Main from "./components/Main";
 
 export default async function Home() {
 
@@ -17,17 +16,23 @@ export default async function Home() {
         imgSrc="/assets/create-and-share.jpg"
       />
 
-      <section className="flex">
+      <section className="md:flex block">
         <Image 
-          className="w-[980px] h-auto"
           width={980}
           height={600}
           src={"/assets/beautiful-stories.jpg"}
           alt="beautiful-stories"
+          className="                
+            lg:w-[54%]
+            md:w-[273px]
+            md:h-[600px]
+            h-[400px]
+            object-cover
+          "
         />
-        <div className="w-[57rem] flex justify-center">
+        <div className="flex md:justify-center items-center md:w-[50rem] max-md:my-16 max-md:px-10">
           <div className="text-left">
-            <h1 className="text-xxl mt-40">
+            <h1 className="mobile:text-xxl text-l">
               BEAUTIFUL <br />
               STORIES <br />
               EVERY TIME
@@ -46,8 +51,8 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="flex justify-between">
-        <div className="w-[57rem] flex justify-center">
+      {/* <section className="flex justify-between max-md:flex-col-reverse">
+        <div className="flex justify-center">
           <div className="text-left">
             <h1 className="text-xxl mt-40">
               DESIGNED FOR <br />
@@ -67,13 +72,20 @@ export default async function Home() {
           </div>
         </div>
         <Image 
-            className="w-[980px] h-auto"
             width={980}
             height={600}
             src={"/assets/designed-for-everyone.jpg"}
             alt="designed-for-everyone"
+            className="            
+              lg:w-[54%]
+              md:w-[273px]
+              md:h-[600px]
+              h-[400px]
+              object-cover
+              object-bottom
+            "
         />
-      </section> 
+      </section>  */}
     </main>
   )
 }
