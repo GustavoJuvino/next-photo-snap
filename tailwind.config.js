@@ -25,8 +25,8 @@ module.exports = {
         "light-gray": "#DFDFDF",
         "custom-gradiant": "from-[#FEC393] via-[#BC7198] to-[#5A77FF]",
       },
-      screen: {
-        mobile: "382px"
+      screens: {
+        "mobile": "382px"
       },
       keyframes: {
         mobileMenu: {
