@@ -2,7 +2,27 @@ import Main from "./components/Main";
 import Content from "./components/Content";
 import Card from "./components/Card";
 
+interface dataProps {
+  id: number;
+  title: string;
+  author: string;
+  date?: string;
+  url: string;
+}
+
+async function getData() {
+  const res = await fetch("http://localhost:3000/api/json");
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+
+  return res.json();
+ 
+}
+
 export default async function Home() {
+  const data = await getData();
 
   return (
     <main>
@@ -37,11 +57,16 @@ export default async function Home() {
         imgSrc="/assets/designed-for-everyone.jpg"
       />
 
-      <Card 
-        title="The Mountains"
-        author="John Applessed"
-        imgSrc="/images/mountains.jpg"
-      />
+    <section className="grid grid-cols-4">
+      {data?.slice(0, 4).map((data: dataProps) => (
+          <Card 
+            key={data.id}
+            title={data.title}
+            author={data.author}
+            imgSrc={data.url}
+          />
+        ))}
+    </section>
     </main>
   )
 }

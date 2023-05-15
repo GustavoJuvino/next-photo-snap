@@ -13,7 +13,7 @@ const Card: React.FC<CardProps> = ({
     imgSrc
 }) => {
   return (
-    <div className="w-[22rem] h-[31rem] grid grid-cols-1">
+    <div className="w-[100%] h-[34rem] grid grid-cols-1">
         <div className="
                 bg-gradient-to-t
                 from-black
@@ -28,7 +28,7 @@ const Card: React.FC<CardProps> = ({
                 height={600}
                 alt="card-img"
                 src={imgSrc}
-                className="w-[22rem] h-[31rem] object-cover mix-blend-multiply"
+                className="w-[100%] h-[34rem] object-cover mix-blend-multiply"
             />
             </div>
         <div className="
@@ -51,7 +51,7 @@ const Card: React.FC<CardProps> = ({
             </span>
             <hr className="opacity-40" />
             <div className="flex justify-between mt-5 text-sm">
-                <p className="font-bold tracking-[2px]">
+                <p className="font-bold tracking-[2px] cursor-pointer">
                     READ STORY
                 </p>
                 <div>
