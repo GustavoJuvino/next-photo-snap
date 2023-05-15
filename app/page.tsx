@@ -57,7 +57,7 @@ export default async function Home() {
         imgSrc="/assets/designed-for-everyone.jpg"
       />
 
-    <section className="grid grid-cols-4">
+    <section className="absolute grid grid-cols-4 w-full hover:mb-2">
       {data?.slice(0, 4).map((data: dataProps) => (
           <Card 
             key={data.id}
@@ -67,6 +67,13 @@ export default async function Home() {
           />
         ))}
     </section>
+    {/* <section className="relative h-[31rem]">
+      <Card 
+          title="The Mountains"
+          author="John Aplessed"
+          imgSrc="/images/mountains.jpg"
+      />
+    </section> */}
     </main>
   )
 }
