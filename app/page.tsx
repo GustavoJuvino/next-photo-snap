@@ -57,7 +57,7 @@ export default async function Home() {
         imgSrc="/assets/designed-for-everyone.jpg"
       />
 
-    <section className="absolute grid grid-cols-4 w-full hover:mb-2">
+    <section className="absolute grid grid-cols-4 w-full">
       {data?.slice(0, 4).map((data: dataProps) => (
           <Card 
             key={data.id}

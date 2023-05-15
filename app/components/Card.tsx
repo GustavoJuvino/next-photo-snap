@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image";
+import styles from "./styles/Cart.module.css";
 
 interface CardProps {
     title: string;
@@ -13,11 +14,23 @@ const Card: React.FC<CardProps> = ({
     imgSrc
 }) => {
     return (
-        <div className="w-[100%] cursor-pointer relative hover:bottom-6">
+        <div className="
+                w-[100%]
+                h-[34rem]
+                grid
+                grid-cols-1
+                cursor-pointer
+                duration-300
+                hover:translate-y-[-6rem]
+            "
+        >
             <div className="
                     bg-gradient-to-t
                     from-black
+                    via-white
                     to-white
+                    row-start-1
+                    col-start-1
                 "
             >
                 <Image 
@@ -28,18 +41,18 @@ const Card: React.FC<CardProps> = ({
                     className="w-[100%] h-[34rem] object-cover mix-blend-multiply"
                 />
             </div>
-            <div className="
-                    z-20
-                    w-[100%]
-                    bottom-0
-                    absolute
+            <div className={`
+                    row-start-1
+                    col-start-1
+                    z-10
                     flex
                     flex-col
                     justify-end
                     px-10
                     py-10
                     text-white
-                "
+                    ${styles.textContainer}
+                `}
             >
                 <h1 className="text-xl font-bold leading-6 mb-1">
                     {title}
@@ -64,7 +77,7 @@ const Card: React.FC<CardProps> = ({
                 </div>
             </div>
         </div>
-      )
+    )
 }
 
 export default Card

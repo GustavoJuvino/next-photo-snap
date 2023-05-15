@@ -23,7 +23,6 @@ module.exports = {
       },
       colors: {
         "light-gray": "#DFDFDF",
-        "custom-gradiant": "from-[#FEC393] via-[#BC7198] to-[#5A77FF]",
       },
       screens: {
         "mobile": "382px"

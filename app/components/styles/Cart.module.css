@@ -1,0 +1,9 @@
+.textContainer {
+    transition: 300;
+}
+
+.textContainer:hover {
+    border-image: linear-gradient(to right, #FEC393, #BC7198, #5A77FF) 30;
+    border-bottom: 6px;
+    border-style: solid;
+}
