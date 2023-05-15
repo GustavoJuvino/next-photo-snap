@@ -1,5 +1,6 @@
 import Main from "./components/Main";
 import Content from "./components/Content";
+import Card from "./components/Card";
 
 export default async function Home() {
 
@@ -34,6 +35,12 @@ export default async function Home() {
         name it. 
         "
         imgSrc="/assets/designed-for-everyone.jpg"
+      />
+
+      <Card 
+        title="The Mountains"
+        author="John Applessed"
+        imgSrc="/images/mountains.jpg"
       />
     </main>
   )
