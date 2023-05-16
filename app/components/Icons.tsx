@@ -22,9 +22,16 @@ export default async function Icons(items: number) {
   const data = await getData();
 
   return (
-    <div className="grid grid-cols-3 mt-[42.5rem]">
+    <div className="
+        xl:flex
+        flex-wrap
+        lg:justify-between
+        block
+        [&>*:nth-child(2)]:pt-[36.5px]  
+      "
+    >
       {data?.slice(0, items).map((data: dataIconsProps) => (
-        <section className="flex flex-col items-center">
+        <section className="flex flex-col items-center max-xl:pt-[80px]">
           <Image 
             width={72}
             height={72}

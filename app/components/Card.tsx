@@ -21,7 +21,8 @@ const Card: React.FC<CardProps> = ({
                 grid-cols-1
                 cursor-pointer
                 duration-300
-                hover:translate-y-[-6rem]
+                lg:hover:translate-y-[-6rem]
+                hover:translate-y-[-20px]
             "
         >
             <div className="

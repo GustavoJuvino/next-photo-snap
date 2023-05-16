@@ -25,7 +25,8 @@ module.exports = {
         "light-gray": "#DFDFDF",
       },
       screens: {
-        "mobile": "382px"
+        "mobile": "382px",
+        "1xl": "1480px" 
       },
       keyframes: {
         mobileMenu: {

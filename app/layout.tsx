@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import { DM_Sans } from "next/font/google"
 import './globals.css';
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: 'Create Next App',
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body suppressHydrationWarning={true} >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

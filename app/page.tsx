@@ -60,7 +60,14 @@ export default async function Home() {
         imgSrc="/assets/designed-for-everyone.jpg"
       />
 
-    <section className="absolute grid grid-cols-4 w-full">
+    <section className="
+        absolute
+        w-full
+        grid
+        lg:grid-cols-4
+        grid-cols-2
+      "
+    >
       {data?.slice(0, 4).map((data: dataProps) => (
           <Card 
             key={data.id}
