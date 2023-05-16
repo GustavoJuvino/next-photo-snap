@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from "next/image";
-import styles from "./styles/Cart.module.css";
+import styles from "./styles/Card.module.css";
 
 interface CardProps {
     title: string;

@@ -1,17 +1,19 @@
 import Main from "./components/Main";
 import Content from "./components/Content";
 import Card from "./components/Card";
+import Icons from "./components/Icons";
+import { Suspense } from "react";
 
 interface dataProps {
   id: number;
   title: string;
   author: string;
   date?: string;
-  url: string;
+  src: string;
 }
 
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/json");
+  const res = await fetch("http://localhost:3000/api/json", { next: { revalidate: 60 } });
 
   if (!res.ok) {
     throw new Error('Failed to fetch data');
@@ -23,6 +25,7 @@ async function getData() {
 
 export default async function Home() {
   const data = await getData();
+  const asyncComponent: JSX.Element = await Icons(3);
 
   return (
     <main>
@@ -63,17 +66,16 @@ export default async function Home() {
             key={data.id}
             title={data.title}
             author={data.author}
-            imgSrc={data.url}
+            imgSrc={data.src}
           />
         ))}
     </section>
-    {/* <section className="relative h-[31rem]">
-      <Card 
-          title="The Mountains"
-          author="John Aplessed"
-          imgSrc="/images/mountains.jpg"
-      />
-    </section> */}
+    
+    <section>
+      <Suspense fallback={<>Loading...</>}>
+        {asyncComponent}
+      </Suspense>
+    </section>
     </main>
   )
 }

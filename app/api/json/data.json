@@ -4,111 +4,111 @@
     "title": "The Mountains",
     "author": "John Appleseed",
     "date": "April 16th 2020",
-    "url": "/images/mountains.jpg"
+    "src": "/images/mountains.jpg"
   },
   {
     "id": 2,
     "title": "Sunset Cityscapes",
     "author": "Benjamin Cruz",
     "date": "April 14th 2020",
-    "url": "/images/cityscapes.jpg"
+    "src": "/images/cityscapes.jpg"
   },
   {
     "id": 3,
     "title": "18 Days Voyage",
     "author": "Alexei Borodin",
     "date": "April 11th 2020",
-    "url": "/images/18-days-voyage.jpg"
+    "src": "/images/18-days-voyage.jpg"
   },
   {
     "id": 4,
     "title": "Architecturals",
     "author": "Samantha Brooke",
     "date": "April 9th 2020",
-    "url": "/images/architecturals.jpg"
+    "src": "/images/architecturals.jpg"
   },
   {
     "id": 5,
     "title": "World Tour 2019",
     "author": "Timothy Wagner",
     "date": "April 7th 2020",
-    "url": "/images/world-tour.jpg"
+    "src": "/images/world-tour.jpg"
   },
   {
     "id": 6,
     "title": "Unforeseen Corners",
     "author": "William Malcolm",
     "date": "April 3rd 2020",
-    "url": "/images/unforeseen-corners.jpg"
+    "src": "/images/unforeseen-corners.jpg"
   },
   {
     "id": 7,
     "title": "King on Africa: Part II",
     "author": "Tim Hillenburg",
     "date": "March 29th 2020",
-    "url": "/images/king-on-africa.jpg"
+    "src": "/images/king-on-africa.jpg"
   },
   {
     "id": 8,
     "title": "The trip to Nowhere",
     "author": "Felicia Rourke",
     "date": "March 21st 2020",
-    "url": "/images/trip-to-nowhere.jpg"
+    "src": "/images/trip-to-nowhere.jpg"
   },
   {
     "id": 9,
     "title": "Rage of The Sea",
     "author": "Mohammed Abdul",
     "date": "March 19th 2020",
-    "url": "/images/rage-of-the-sea.jpg"
+    "src": "/images/rage-of-the-sea.jpg"
   },
   {
     "id": 10,
     "title": "Running Free",
     "author": "Michelle",
     "date": "March 16th 2020",
-    "url": "/images/running-free.jpg"
+    "src": "/images/running-free.jpg"
   },
   {
     "id": 11,
     "title": "Behind the Waves",
     "author": "Lamar Wilson",
     "date": "March 11th 2020",
-    "url": "/images/behind-the-waves.jpg"
+    "src": "/images/behind-the-waves.jpg"
   },
   {
     "id": 12,
     "title": "Calm Waters",
     "author": "Samantha Brooke",
     "date": "March 9th 2020",
-    "url": "/images/calm-waters.jpg"
+    "src": "/images/calm-waters.jpg"
   },
   {
     "id": 13,
     "title": "The Milk Way",
     "author": "Benjamin Cruz",
     "date": "March 5th 2020",
-    "url": "/images/milky-way.jpg"
+    "src": "/images/milky-way.jpg"
   },
   {
     "id": 14,
     "title": "Night at The Dark Forest",
     "author": "Mohammed Abdul",
     "date": "March 4th 2020",
-    "url": "/images/dark-forest.jpg"
+    "src": "/images/dark-forest.jpg"
   },
   {
     "id": 15,
     "title": "Somwarpet's Beauty",
     "author": "Michelle",
     "date": "March 1st 2020",
-    "url": "/images/somwarpet.jpg"
+    "src": "/images/somwarpet.jpg"
   },
   {
     "id": 16,
     "title": "Land of Dreams",
     "author": "William Malcolm",
     "date": "February 25th 2020",
-    "url": "/images/land-of-dreams.jpg"
+    "src": "/images/land-of-dreams.jpg"
   }
 ]
