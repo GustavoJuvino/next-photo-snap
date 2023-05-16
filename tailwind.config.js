@@ -26,6 +26,7 @@ module.exports = {
       },
       screens: {
         "mobile": "382px",
+        "lg": "1140px",
         "1xl": "1480px" 
       },
       keyframes: {

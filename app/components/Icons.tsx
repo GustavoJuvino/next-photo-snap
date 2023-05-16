@@ -23,23 +23,22 @@ export default async function Icons(items: number) {
 
   return (
     <div className="
-        xl:flex
+        lg:flex
         flex-wrap
         lg:justify-between
-        block
-        [&>*:nth-child(2)]:pt-[36.5px]  
+        lg:[&>*:nth-child(2)]:pt-[35.5px]  
       "
     >
       {data?.slice(0, items).map((data: dataIconsProps) => (
-        <section className="flex flex-col items-center max-xl:pt-[80px]">
+        <section className="flex flex-col items-center max-lg:pb-20">
           <Image 
             width={72}
             height={72}
             alt="img-icon"
             src={data.src}
-            className="w-auto h-auto"
+            className="w-auto h-auto mb-11"
           />
-          <div className="w-[23rem] text-center pt-12">
+          <div className="w-[23rem] text-center">
             <h3 className="text-lg font-bold">{data?.title}</h3>
             <p className="opacity-60 leading-6 mt-4">
               {data?.description}

@@ -65,7 +65,7 @@ export default async function Home() {
         w-full
         grid
         lg:grid-cols-4
-        grid-cols-2
+        sm:grid-cols-2
       "
     >
       {data?.slice(0, 4).map((data: dataProps) => (
@@ -78,7 +78,14 @@ export default async function Home() {
         ))}
     </section>
     
-    <section>
+    <section className="
+        1xl:mx-[165px]
+        lg:mt-[41.5rem]
+        md:mt-[73.5rem]
+        sm:mt-[77.5rem]
+        mt-[145rem]
+      "
+    >
       <Suspense fallback={<>Loading...</>}>
         {asyncComponent}
       </Suspense>
