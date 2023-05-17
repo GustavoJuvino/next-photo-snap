@@ -37,6 +37,7 @@ const Button: React.FC<ButtonProps> = ({
             `}
             ${type === 2 && `
                 w-52
+                h-auto
                 bg-transparent
                 text-left
                 hover:bg-transparent
