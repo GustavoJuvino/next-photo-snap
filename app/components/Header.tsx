@@ -10,12 +10,12 @@ const Header = () => {
     <div className="flex justify-between mt-7 lg:mx-40 mx-10 items-center z-20">
         <div>
             <Image
-                className="w-auto h-auto"
-                src={"assets/logo.svg"}
-                width={170}
-                height={16}
-                alt="Logo"
-                priority={true}
+              className="w-auto h-auto"
+              src={"assets/logo.svg"}
+              width={170}
+              height={16}
+              alt="Logo"
+              priority={true}
             />
         </div>
         <ul className="hidden md:flex font-bold tracking-widest text-sm">
