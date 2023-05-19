@@ -26,7 +26,8 @@ const Footer = () => {
         h-[auto]
         py-[64px]
         mt-[7.5rem]
-        px-[165px]
+        1xl:px-[165px]
+        px-6
         bg-black
       "
     >
@@ -41,17 +42,26 @@ const Footer = () => {
           />
         </div>
 
-        <ul className="ml-28 h-[7.5rem] col-start-2">
+        <ul className="
+            lg:ml-28
+            h-[7.5rem]
+            lg:col-start-2
+            col-start-1
+            max-lg:flex
+          "
+        >
           {footerItems.map((item) => (
             <li className="
                 text-sm
                 text-white
                 font-bold
                 tracking-[2px]
-                mb-[20.6px]
+                lg:mb-[20.6px]
                 cursor-pointer
                 duration-300
                 hover:opacity-30
+                max-lg:pr-6
+                max-lg:mt-8
               "
             >
               {item}
@@ -88,21 +98,6 @@ const Footer = () => {
           <span>Copyright 2019. All Rights Reserved</span>
         </div>
       </section>
-
-
-      {/* <section className="text-white mt-[50px]">
-        <div>
-            <Button 
-              type={2}
-              value={"GET AN INVITE"}
-              background={true}
-              color="white"
-            />
-        </div>
-        <div className="pt-[90.5px] text-sm opacity-50">
-          <span>Copyright 2019. All Rights Reserved</span>
-        </div>
-      </section>  */}
     </footer>
   )
 }
