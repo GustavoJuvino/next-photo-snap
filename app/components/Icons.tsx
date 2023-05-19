@@ -38,7 +38,7 @@ export default async function Icons(items: number) {
             src={data.src}
             className="w-auto h-auto mb-11"
           />
-          <div className="w-[23rem] text-center">
+          <div className="sm:w-[23rem] text-center">
             <h3 className="text-lg font-bold">{data?.title}</h3>
             <p className="opacity-60 leading-6 mt-4">
               {data?.description}
