@@ -21,17 +21,19 @@ const Footer = () => {
   return (
     <footer className="
         flex
-        items-center
         justify-between
+        max-md:flex-col
+        max-md:items-center
+        max-md:text-center
         h-[auto]
         py-[64px]
-        mt-[7.5rem]
+        lg:mt-[7.5rem]
         1xl:px-[165px]
         px-6
         bg-black
       "
     >
-      <section className="grid grid-cols-2">
+      <section className="grid md:grid-cols-2 max-md:grid-rows-2">
         <div>
           <Image
             src={"assets/logo-white.svg"}
@@ -44,10 +46,13 @@ const Footer = () => {
 
         <ul className="
             lg:ml-28
-            h-[7.5rem]
+            md:h-[7.5rem]
             lg:col-start-2
             col-start-1
             max-lg:flex
+            max-md:flex-col
+            max-md:row-start-3
+            max-md:mt-12
           "
         >
           {footerItems.map((item) => (
@@ -62,6 +67,8 @@ const Footer = () => {
                 hover:opacity-30
                 max-lg:pr-6
                 max-lg:mt-8
+                max-md:mt-5
+                max-md:pl-5
               "
             >
               {item}
@@ -69,9 +76,16 @@ const Footer = () => {
           ))}
         </ul>
 
-        <ul className="flex col-start-1">
+        <ul className="
+            flex
+            md:col-start-1
+            max-md:justify-between
+            max-md:row-start-2
+            max-md:mt-8
+          "
+        >
           {socialMedias.map((icon) => (
-            <li className="pr-3">
+            <li className="md:pr-3">
               <Image
                 id="social-media-icon"
                 src={`assets/${icon}`}
@@ -85,7 +99,7 @@ const Footer = () => {
         </ul>
       </section>
 
-      <section className="text-white">
+      <section className="text-white max-md:mt-[120px]">
         <div>
           <Button 
             type={2}
@@ -94,7 +108,7 @@ const Footer = () => {
             color="white"
           />
         </div>
-        <div className="pt-[6.2rem] text-sm opacity-50">
+        <div className="md:pt-[6.2rem] pt-9 opacity-50">
           <span>Copyright 2019. All Rights Reserved</span>
         </div>
       </section>
