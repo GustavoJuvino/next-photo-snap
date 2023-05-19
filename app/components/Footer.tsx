@@ -23,7 +23,8 @@ const Footer = () => {
         flex
         items-center
         justify-between
-        h-[250px]
+        h-[auto]
+        py-[64px]
         mt-[7.5rem]
         px-[165px]
         bg-black
