@@ -8,7 +8,6 @@ const Stories = () => {
       <section className="
           grid
           md:grid-cols-1
-          max-md:grid-rows-2
           mt-7
           text-white
           items-center
@@ -22,20 +21,20 @@ const Stories = () => {
             mobile:pl-10
             max-md:h-[100%]
             max-md:w-[100%]
-            z-30
+            md:z-30
             max-md:bg-black
             flex
             flex-col
             justify-center
           "
         >
-          <span className="tracking-[2px] font-bold">
+          <span className="tracking-[2px] font-bold max-md:pt-12">
             LAST MONTH’S FEATURED STORY
           </span>
-          <h1 className="text-xxl tracking-[4.17px] mt-6 max-mobile:text-l">
+          <h1 className="text-xxl tracking-[4.17px] pt-6 max-mobile:text-l">
             HAZY FULL <br/> MOON OF <br/> APPALACHIA
           </h1>
-          <div className="flex mt-4 max-mobile:text-sm">
+          <div className="flex pt-4 max-mobile:text-sm">
             <p className="opacity-[75%]">
               March 2nd 2020
             </p>
@@ -43,19 +42,21 @@ const Stories = () => {
               by John Applessed
             </span>
           </div>
-          <p className="opacity-[75%] my-6 sm:w-[410px] max-mobile:text-sm">
+          <p className="opacity-[75%] py-6 sm:w-[410px] max-mobile:text-sm">
             The dissected plateau area, while not actually made up
             of geological mountains, is popularly called "mountains,"
             especially in eastern Kentucky and West Virginia, and
             while the ridges are not high, the terrain is extremely
             rugged.
           </p>
-          <Button 
-            type={2}
-            value="READ THE STORY"
-            color="white"
-            background={true}
-          />
+          <div className="max-md:pb-12">
+            <Button 
+              type={2}
+              value="READ THE STORY"
+              color="white"
+              background={true}
+            />
+          </div>
         </div>
 
         {/* Background */}
@@ -65,7 +66,8 @@ const Stories = () => {
             bg-black
             opacity-20
             w-[100%]
-            h-[650px]
+            mobile:h-[100%]
+            h-[315px]
             z-10
           "
         ></div>
@@ -76,7 +78,9 @@ const Stories = () => {
           alt="moon-of-appalacia"
           className="
             w-screen
-            h-[650px]
+            md:h-[650px]
+            mobile:h-[100%]
+            h-[315px]
             object-cover
             col-start-1
             row-start-1

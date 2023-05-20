@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body, main{
+    margin:0;
+    padding: 0;
+}
+
+.modal {
+    overflow-y: hidden;
+}
+
 #social-media-icon {
     filter: brightness(0) invert(1);
 }

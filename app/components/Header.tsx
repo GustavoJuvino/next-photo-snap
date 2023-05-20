@@ -30,7 +30,13 @@ const Header = () => {
         </div>
         <ul className="hidden md:flex font-bold tracking-widest text-sm">
           {headerItems.map((item) => (
-            <li className="hover:text-light-gray mx-6 cursor-pointer duration-300">
+            <li className="
+                mx-6
+                cursor-pointer
+                duration-300
+                hover:text-light-gray
+              "
+            >
               {item}
             </li>
           ))}
