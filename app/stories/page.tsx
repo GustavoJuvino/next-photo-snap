@@ -5,15 +5,37 @@ import Image from "next/image";
 const Stories = () => {
   return (
     <main>
-      <section className="grid grid-cols-1 mt-7 text-white items-center">
-        <div className="col-start-1 row-start-1 w-[410px] ml-40 z-30">
+      <section className="
+          grid
+          md:grid-cols-1
+          max-md:grid-rows-2
+          mt-7
+          text-white
+          items-center
+        "
+      >
+        <div className="
+            md:col-start-1
+            md:row-start-1
+            lg:ml-40
+            pl-2
+            mobile:pl-10
+            max-md:h-[100%]
+            max-md:w-[100%]
+            z-30
+            max-md:bg-black
+            flex
+            flex-col
+            justify-center
+          "
+        >
           <span className="tracking-[2px] font-bold">
             LAST MONTH’S FEATURED STORY
           </span>
-          <h1 className="text-xxl tracking-[4.17px] mt-6">
+          <h1 className="text-xxl tracking-[4.17px] mt-6 max-mobile:text-l">
             HAZY FULL <br/> MOON OF <br/> APPALACHIA
           </h1>
-          <div className="flex mt-4">
+          <div className="flex mt-4 max-mobile:text-sm">
             <p className="opacity-[75%]">
               March 2nd 2020
             </p>
@@ -21,7 +43,7 @@ const Stories = () => {
               by John Applessed
             </span>
           </div>
-          <p className="opacity-[75%] my-6">
+          <p className="opacity-[75%] my-6 sm:w-[410px] max-mobile:text-sm">
             The dissected plateau area, while not actually made up
             of geological mountains, is popularly called "mountains,"
             especially in eastern Kentucky and West Virginia, and
@@ -53,7 +75,7 @@ const Stories = () => {
           src="/assets/moon-of-appalacia.jpg"
           alt="moon-of-appalacia"
           className="
-            w-[100%]
+            w-screen
             h-[650px]
             object-cover
             col-start-1

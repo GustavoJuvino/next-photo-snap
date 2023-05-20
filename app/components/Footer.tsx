@@ -27,7 +27,6 @@ const Footer = () => {
         max-md:text-center
         h-[auto]
         py-[64px]
-        lg:mt-[7.5rem]
         1xl:px-[165px]
         px-6
         bg-black
