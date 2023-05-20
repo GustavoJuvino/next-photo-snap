@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from 'react';
 import Button from "./Button";
+import Link from "next/link";
 
 interface ContentProps {
     type: number;
@@ -48,11 +49,13 @@ const Content: React.FC<ContentProps> = ({
             <p className="leading-6 opacity-60 mt-5 mb-12">
                 {content}
             </p>
-            <Button
-              type={2}
-              value="VIEW THE STORIES"
-              color="black"
-            />
+            <Link href="/stories">
+              <Button
+                type={2}
+                value="VIEW THE STORIES"
+                color="black"
+              />
+            </Link>
           </div>
         </div>
     </section>
