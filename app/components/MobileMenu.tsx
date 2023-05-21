@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { headerItems } from "./Header";
 import styles from "./styles/MobileMenu.module.css";
 import Button from "./Button";
+import Link from "next/link";
 
 const MobileMenu = () => {
   const [active, setActive] = useState(false);
@@ -21,7 +22,7 @@ const MobileMenu = () => {
             absolute
             max-md:top-[97px]
             max-md:left-0
-            max-md:z-50
+            max-md:z-[80]
             max-md:w-full
             max-md:h-screen
             bg-black
@@ -41,7 +42,7 @@ const MobileMenu = () => {
                 block
                 md:hidden
                 absolute
-                z-50
+                z-[90]
                 w-[100%]
                 h-72
                 left-0
@@ -55,18 +56,18 @@ const MobileMenu = () => {
                 <div>
                     <ul className="flex flex-col justify-center items-center select-none">
                         {headerItems.map((item) => (
-                            <li 
-                                key={item}
-                                className="
-                                    font-bold
-                                    tracking-widest
-                                    hover:text-light-gray
-                                    my-3
-                                    cursor-pointer
-                                "
-                            >
-                                {item}
-                            </li>
+                            <Link href={`/${item}`} >
+                                <li className="
+                                        font-bold
+                                        tracking-widest
+                                        hover:text-light-gray
+                                        my-3
+                                        cursor-pointer
+                                    "
+                                >
+                                    {item.toUpperCase()}
+                                </li>
+                            </Link>
                         ))}
                     </ul>
                     <div className="flex justify-center">

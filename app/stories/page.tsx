@@ -1,8 +1,12 @@
 import React from 'react'
 import Button from "../components/Button";
 import Image from "next/image";
+import Card from "../components/Card";
+import { getData } from "../helper/fetchData";
 
-const Stories = () => {
+export default async function Stories() {
+  const data = await getData("http://localhost:3000/api/json");
+
   return (
     <main>
       <section className="
@@ -89,8 +93,20 @@ const Stories = () => {
           "
         />
       </section>
+
+      {/* Cards */}
+      <section className="grid lg:grid-cols-4 sm:grid-cols-2">
+        {data?.map((data: dataProps) => (
+          <div className="hover:translate-y-[-24px] duration-300 z-50">
+            <Card 
+              key={data.id}
+              title={data.title}
+              author={data.author}
+              imgSrc={data.src}
+            />
+          </div>
+        ))}
+      </section>
     </main>
   )
 }
-
-export default Stories; 

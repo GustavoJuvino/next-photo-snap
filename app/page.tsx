@@ -3,28 +3,10 @@ import Content from "./components/Content";
 import Card from "./components/Card";
 import Icons from "./components/Icons";
 import { Suspense } from "react";
-
-interface dataProps {
-  id: number;
-  title: string;
-  author: string;
-  date?: string;
-  src: string;
-}
-
-async function getData() {
-  const res = await fetch("http://localhost:3000/api/json", { next: { revalidate: 60 } });
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-
-  return res.json();
- 
-}
+import { getData } from "./helper/fetchData";
 
 export default async function Home() {
-  const data = await getData();
+  const data = await getData("http://localhost:3000/api/json");
   const asyncComponent: JSX.Element = await Icons(3);
 
   return (
@@ -61,7 +43,6 @@ export default async function Home() {
       />
 
     <section className="
-        absolute
         w-full
         grid
         lg:grid-cols-4
@@ -69,13 +50,20 @@ export default async function Home() {
       "
     >
       {data?.slice(0, 4).map((data: dataProps) => (
+        <div className="                
+            duration-300
+            lg:hover:translate-y-[-6rem]
+            hover:translate-y-[-20px]
+          "
+        >
           <Card 
             key={data.id}
             title={data.title}
             author={data.author}
             imgSrc={data.src}
           />
-        ))}
+        </div>
+      ))}
     </section>
     
     <section className="

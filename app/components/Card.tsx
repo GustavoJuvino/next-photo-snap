@@ -20,9 +20,6 @@ const Card: React.FC<CardProps> = ({
                 grid
                 grid-cols-1
                 cursor-pointer
-                duration-300
-                lg:hover:translate-y-[-6rem]
-                hover:translate-y-[-20px]
             "
         >
             <div className="
