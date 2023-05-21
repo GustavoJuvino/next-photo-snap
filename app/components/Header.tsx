@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Button from "./Button";
 import MobileMenu from "./MobileMenu";
+import Link from "next/link";
 
-export let headerItems = ["STORIES", "FEATURES", "PRICING"];
+export let headerItems = ["stories", "features", "pricing"];
 
 const Header = () => {
 
@@ -19,26 +20,30 @@ const Header = () => {
       "
     >
         <div>
+          <Link href="/">
             <Image
-              className="w-auto h-auto"
               src={"assets/logo.svg"}
               width={170}
               height={16}
               alt="Logo"
               priority={true}
+              className="w-auto h-auto cursor-pointer"
             />
+          </Link>
         </div>
         <ul className="hidden md:flex font-bold tracking-widest text-sm">
           {headerItems.map((item) => (
-            <li className="
-                mx-6
-                cursor-pointer
-                duration-300
-                hover:text-light-gray
-              "
-            >
-              {item}
-            </li>
+            <Link href={`/${item}`} >
+              <li className="
+                  mx-6
+                  cursor-pointer
+                  duration-300
+                  hover:text-light-gray
+                "
+              >
+                {item.toUpperCase()}
+              </li>
+            </Link>
           ))}
         </ul>
       <Button
