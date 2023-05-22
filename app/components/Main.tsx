@@ -7,7 +7,7 @@ interface MainProps {
     title?: string;
     content: string;
     gradientSize: string;
-    imgSrc: string;
+    imgSrc?: string;
     // Button Props
     button?: boolean;
     buttonValue?: string | undefined;
@@ -18,7 +18,7 @@ const Main: React.FC<MainProps> = ({
     title,
     content,
     gradientSize,
-    imgSrc,
+    imgSrc = "",
     button,
     buttonValue = ""
 }) => {
@@ -41,13 +41,9 @@ const Main: React.FC<MainProps> = ({
         >
             <div className="text-left w-[400px]">
                 <Gradient size={gradientSize} responsible={true} />
-                {!title ? (
                     <h1 className="mobile:text-xxl text-l text-light-gray mb-5">
-                        CREATE AND <br />
-                        SHARE YOUR <br />
-                        PHOTO STORIES.
+                        {title}
                     </h1>
-                ) :  <div>{title}</div>}
                 <p className="leading-6 opacity-60 mb-12">
                     {content}
                 </p>
@@ -65,17 +61,16 @@ const Main: React.FC<MainProps> = ({
             width={850}
             height={650}
             src={imgSrc}
-            alt="create-and-share"
-            className=" 
+            alt="main-img"
+            className={`
                 lg:w-[60%]
-                md:w-[273px]
+                md:w-[32%]
                 md:h-[768px]
-                w-[100vw]
+                w-[100%]
                 h-[450px]
                 object-cover
-                bg-center
                 overflow-x-hidden
-            "
+            `}
         />
     </section>
   )
