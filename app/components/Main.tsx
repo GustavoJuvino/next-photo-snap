@@ -34,7 +34,7 @@ const Main: React.FC<MainProps> = ({
             md:justify-center
             items-center
             lg:px-40
-            px-10
+            mobile:px-10
             bg-black
             text-white
         "
@@ -67,7 +67,7 @@ const Main: React.FC<MainProps> = ({
                 md:w-[32%]
                 md:h-[768px]
                 w-[100%]
-                h-[450px]
+                h-auto
                 object-cover
                 overflow-x-hidden
             `}

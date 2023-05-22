@@ -2,6 +2,7 @@ import React from 'react'
 import Main from "../components/Main";
 
 const Features = () => {
+
   return (
     <section>
       <Main 
