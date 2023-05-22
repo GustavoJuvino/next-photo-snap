@@ -27,10 +27,12 @@ export default async function Icons(items: number) {
         flex-wrap
         lg:justify-between
         lg:[&>*:nth-child(2)]:pt-[35.5px]  
+        max-lg:pt-6
+        max-lg:pb-20
       "
     >
       {data?.slice(0, items).map((data: dataIconsProps) => (
-        <section className="flex flex-col items-center max-lg:pb-20">
+        <section className="flex flex-col items-center max-lg:pt-14">
           <Image 
             width={72}
             height={72}

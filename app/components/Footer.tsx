@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import Button from "./Button";
+import Link from "next/link";
 
 const socialMedias = [
   "facebook.svg",
@@ -11,10 +12,10 @@ const socialMedias = [
 ];
 
 const footerItems = [
-  "HOME",
-  "STORIES",
-  "FEATURES",
-  "PRICING",
+  "home",
+  "stories",
+  "features",
+  "pricing",
 ];
 
 const Footer = () => {
@@ -33,7 +34,7 @@ const Footer = () => {
       "
     >
       <section className="grid md:grid-cols-2 max-md:grid-rows-2">
-        <div>
+        <Link href="/">
           <Image
             src={"assets/logo-white.svg"}
             width={170}
@@ -41,7 +42,7 @@ const Footer = () => {
             alt="Logo"
             className="w-auto h-auto mt-[2.5px]"
           />
-        </div>
+        </Link>
 
         <ul className="
             lg:ml-28
@@ -55,23 +56,25 @@ const Footer = () => {
           "
         >
           {footerItems.map((item) => (
-            <li className="
-                text-sm
-                text-white
-                font-bold
-                tracking-[2px]
-                lg:mb-[20.6px]
-                cursor-pointer
-                duration-300
-                hover:opacity-30
-                max-lg:pr-6
-                max-lg:mt-8
-                max-md:mt-5
-                max-md:pl-5
-              "
-            >
-              {item}
-            </li>
+            <Link href={item === "home" ? "/" : `/${item}`}>
+              <li className="
+                  text-sm
+                  text-white
+                  font-bold
+                  tracking-[2px]
+                  lg:mb-[20.6px]
+                  cursor-pointer
+                  duration-300
+                  hover:opacity-30
+                  max-lg:pr-6
+                  max-lg:mt-8
+                  max-md:mt-5
+                  max-md:pl-5
+                "
+              >
+                {item.toUpperCase()}
+              </li>
+            </Link>
           ))}
         </ul>
 
