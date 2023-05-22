@@ -13,6 +13,7 @@ const Features = () => {
         "
         gradientSize="sm"
         imgSrc="/assets/photographer.jpg"
+        responsiveImg="md:bg-[url('/assets/tablet/photographer.jpg')]"
       />
     </section>
   )

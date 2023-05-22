@@ -8,6 +8,7 @@ interface MainProps {
     content: string;
     gradientSize: string;
     imgSrc?: string;
+    responsiveImg?: string;
     // Button Props
     button?: boolean;
     buttonValue?: string | undefined;
@@ -19,6 +20,7 @@ const Main: React.FC<MainProps> = ({
     content,
     gradientSize,
     imgSrc = "",
+    responsiveImg,
     button,
     buttonValue = ""
 }) => {
@@ -57,19 +59,29 @@ const Main: React.FC<MainProps> = ({
                 )}
             </div>
         </div>
+
+        <div className={ responsiveImg && `
+            xl:hidden
+            w-full
+            h-auto
+            bg-no-repeat
+            bg-cover
+            ${responsiveImg}
+        `}
+        />
         <Image 
             width={850}
             height={650}
             src={imgSrc}
             alt="main-img"
             className={`
-                lg:w-[60%]
-                md:w-[32%]
+                w-full
                 md:h-[768px]
-                w-[100%]
                 h-auto
                 object-cover
+                ${responsiveImg ? "max-xl:hidden" : "block"}
                 overflow-x-hidden
+                max-md:block
             `}
         />
     </section>
