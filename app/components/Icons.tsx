@@ -25,11 +25,20 @@ export default async function Icons(items: number, width: string) {
     <div className={`
         grid
         lg:grid-cols-3
-        gap-10
-        ${width === "sm" && "lg:py-[7.5rem] py-10"}
-        ${width === "xl" && "py-40"}
-        lg:[&>*:nth-child(2)]:pt-[35.5px]
-        overflow-x-hidden
+        max-lg:gap-10
+        ${width === "sm" && `
+          lg:py-[7.5rem]
+          py-10
+          lg:[&>*:nth-child(2)]:pt-[35.5px]
+        `}
+
+        ${width === "xl" && `
+          pb-24
+          pt-[52px]
+          md:grid-cols-2
+          md:[&>*:nth-child(2)]:pt-[35.5px]
+        `}
+
       `}
     >
       {data?.slice(0, items).map((data: dataIconsProps) => (
@@ -39,7 +48,7 @@ export default async function Icons(items: number, width: string) {
             height={72}
             alt="img-icon"
             src={data.src}
-            className="w-auto h-auto mb-11"
+            className="w-auto h-auto my-11"
           />
 
           <div className="mobile:w-[23rem] text-center">
