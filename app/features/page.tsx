@@ -10,7 +10,8 @@ export default async function Features() {
     <section>
       <Main 
         title="FEATURES"
-        content="We make sure all of our features are designed to be
+        content="
+          We make sure all of our features are designed to be
           loved by every aspiring and even professional
           photograpers who wanted to share their stories.
         "

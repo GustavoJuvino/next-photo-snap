@@ -78,6 +78,7 @@ const Main: React.FC<MainProps> = ({
                 md:h-auto
                 max-md:h-[300px]
                 object-cover
+                max-md:object-top
                 ${responsiveImg ? "max-xl:hidden" : "block"}
                 overflow-x-hidden
                 max-md:block
