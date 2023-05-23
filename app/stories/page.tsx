@@ -35,7 +35,7 @@ export default async function Stories() {
           <span className="tracking-[2px] font-bold max-md:pt-12">
             LAST MONTH’S FEATURED STORY
           </span>
-          <h1 className="text-xxl tracking-[4.17px] pt-6 max-mobile:text-l">
+          <h1 className="text-xxl pt-6 max-mobile:text-l">
             HAZY FULL <br/> MOON OF <br/> APPALACHIA
           </h1>
           <div className="flex pt-4 max-mobile:text-sm">

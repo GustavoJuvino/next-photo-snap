@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import Main from "../components/Main";
 import Icons from "../components/Icons";
+import Beta from "../components/Beta";
 
 export default async function Features() {
   const asyncComponent: JSX.Element = await Icons(6, "xl");
@@ -18,12 +19,14 @@ export default async function Features() {
         responsiveImg="md:bg-[url('/assets/tablet/photographer.jpg')]"
       />
 
-      <section className=""
-        >
-          <Suspense fallback={<>Loading...</>}>
-            {asyncComponent}
-          </Suspense>
-        </section>
+      {/* Icons */}
+      <section>
+        <Suspense fallback={<>Loading...</>}>
+          {asyncComponent}
+        </Suspense>
+      </section>
+
+      <Beta />
     </section>
   )
 }
