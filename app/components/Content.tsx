@@ -37,7 +37,7 @@ const Content: React.FC<ContentProps> = ({
             md:justify-center
             md:w-[50rem]
             max-md:my-16
-            max-md:px-10
+            mobile:px-10
             ${type === 2 && `justify-between`}
         `}
             

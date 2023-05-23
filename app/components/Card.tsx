@@ -46,7 +46,7 @@ const Card: React.FC<CardProps> = ({
                     flex
                     flex-col
                     justify-end
-                    px-10
+                    mobile:px-10
                     py-10
                     text-white
                     ${styles.textContainer}

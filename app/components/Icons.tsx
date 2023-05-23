@@ -18,13 +18,22 @@ interface dataIconsProps {
   src: string;
 }
 
-export default async function Icons(items: number) {
+export default async function Icons(items: number, width: string) {
   const data = await getData();
 
   return (
-    <>
+    <div className={`
+        grid
+        lg:grid-cols-3
+        gap-10
+        ${width === "sm" && "lg:py-[7.5rem] py-10"}
+        ${width === "xl" && "py-40"}
+        lg:[&>*:nth-child(2)]:pt-[35.5px]
+        overflow-x-hidden
+      `}
+    >
       {data?.slice(0, items).map((data: dataIconsProps) => (
-        <div className="flex flex-col items-center max-lg:pt-14">
+        <div className="flex flex-col items-center">
           <Image 
             width={72}
             height={72}
@@ -33,7 +42,7 @@ export default async function Icons(items: number) {
             className="w-auto h-auto mb-11"
           />
 
-          <div className="sm:w-[23rem] text-center">
+          <div className="mobile:w-[23rem] text-center">
             <h3 className="text-lg font-bold">{data?.title}</h3>
             <p className="opacity-60 leading-6 mt-4">
               {data?.description}
@@ -41,7 +50,7 @@ export default async function Icons(items: number) {
           </div>
         </div>
       ))}
-    </>
+    </div>
   )
 }
 

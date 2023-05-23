@@ -3,7 +3,7 @@ import Main from "../components/Main";
 import Icons from "../components/Icons";
 
 export default async function Features() {
-  const asyncComponent: JSX.Element = await Icons(6);
+  const asyncComponent: JSX.Element = await Icons(6, "xl");
 
   return (
     <section>
@@ -18,11 +18,12 @@ export default async function Features() {
         responsiveImg="md:bg-[url('/assets/tablet/photographer.jpg')]"
       />
 
-      <section>
-        <Suspense fallback={<>Loading...</>}>
-          {asyncComponent}
-        </Suspense>
-      </section>
+      <section className=""
+        >
+          <Suspense fallback={<>Loading...</>}>
+            {asyncComponent}
+          </Suspense>
+        </section>
     </section>
   )
 }

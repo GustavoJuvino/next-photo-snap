@@ -27,7 +27,7 @@ const Header = () => {
               height={16}
               alt="Logo"
               priority={true}
-              className="w-auto h-auto cursor-pointer"
+              className="mobile:w-auto w-[100px] h-auto cursor-pointer"
             />
           </Link>
         </div>

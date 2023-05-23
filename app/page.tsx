@@ -7,7 +7,7 @@ import { getData } from "./helper/fetchData";
 
 export default async function Home() {
   const data = await getData("http://localhost:3000/api/json");
-  const asyncComponent: JSX.Element = await Icons(3);
+  const asyncComponent: JSX.Element = await Icons(3, "sm");
 
   return (
     <main>
@@ -66,18 +66,8 @@ export default async function Home() {
         </div>
       ))}
     </section>
-    
-    <section className="
-        1xl:mx-[165px]
-        lg:py-[7.5rem]
-        lg:flex
-        flex-wrap
-        lg:justify-between
-        lg:[&>*:nth-child(2)]:pt-[35.5px]  
-        max-lg:pt-6
-        max-lg:pb-20
-      "
-    >
+
+    <section>
       <Suspense fallback={<>Loading...</>}>
         {asyncComponent}
       </Suspense>

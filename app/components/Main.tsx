@@ -35,7 +35,7 @@ const Main: React.FC<MainProps> = ({
             md:justify-center
             items-center
             lg:px-40
-            px-10
+            mobile:px-10
             max-md:py-[4.5rem]
             bg-black
             text-white
