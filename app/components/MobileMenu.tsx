@@ -21,6 +21,7 @@ const MobileMenu = () => {
             bg-opacity-50
             `
          : ""}></div>
+         
         <div className={styles.mobileButton}>
             <span 
                 id={styles.hamburger} 
@@ -35,7 +36,7 @@ const MobileMenu = () => {
                 md:hidden
                 absolute
                 z-[90]
-                w-[100%]
+                w-full
                 h-72
                 left-0
                 mt-7
@@ -65,7 +66,11 @@ const MobileMenu = () => {
                     <div className="flex justify-center">
                         <hr className="w-[310px] my-5"/>
                     </div>
-                    <div className="flex justify-center mt-5">
+                    <div className="
+                        flex
+                        justify-center
+                        mt-5
+                    ">
                         <Button 
                             type={1}
                             value="GET AN INVITE"

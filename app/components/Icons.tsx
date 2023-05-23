@@ -25,10 +25,10 @@ export default async function Icons(items: number, width: string) {
     <div className={`
         grid
         lg:grid-cols-3
-        max-lg:gap-10
         ${width === "sm" && `
           lg:py-[7.5rem]
           py-10
+          max-lg:gap-10
           lg:[&>*:nth-child(2)]:pt-[35.5px]
         `}
 

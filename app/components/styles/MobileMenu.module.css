@@ -17,14 +17,14 @@
     color: black;
     display: block;
     border-top: 2px solid;
-    width: 30px;
+    width: 28px;
     
 }
 
 #hamburger::after{
     content: "";
     display: block;
-    width: 30px;
+    width: 28px;
     height: 2px;
     background-color: currentColor;
     margin-top: 5px;

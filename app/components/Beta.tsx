@@ -10,25 +10,30 @@ const Beta = () => {
         h-[280px]
         grid
         grid-cols-1
+        relative
     ">
-        <Gradient size="md" />
+        <Gradient size="md" responsible={true} />
         <div className="
             flex
-            justify-between
-            items-center
-            px-[165px]
+            max-md:flex-col
+            md:justify-between
+            justify-center
+            md:items-center
+            lg:px-[165px]
+            md:px-6
+            mobile:px-10
             col-start-1
             row-start-1
             z-30
         ">
             <div>
-                <h1 className="text-xxl text-white">
+                <h1 className="sm:text-xxl text-l text-white">
                     WE'RE IN BETA.<br />
                     GET YOUR INVITE <br/>
                     TODAY!
                 </h1>
             </div>
-            <div>
+            <div className="max-md:pt-6">
                 <Button 
                 type={2}
                 value="GET AN INVITE"
@@ -58,6 +63,8 @@ const Beta = () => {
                 row-start-1
                 z-20
                 mix-blend-multiply
+                object-cover
+                
             "
         />
     </section>
