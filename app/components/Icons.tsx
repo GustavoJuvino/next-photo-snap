@@ -22,17 +22,9 @@ export default async function Icons(items: number) {
   const data = await getData();
 
   return (
-    <div className="
-        lg:flex
-        flex-wrap
-        lg:justify-between
-        lg:[&>*:nth-child(2)]:pt-[35.5px]  
-        max-lg:pt-6
-        max-lg:pb-20
-      "
-    >
+    <>
       {data?.slice(0, items).map((data: dataIconsProps) => (
-        <section className="flex flex-col items-center max-lg:pt-14">
+        <div className="flex flex-col items-center max-lg:pt-14">
           <Image 
             width={72}
             height={72}
@@ -40,15 +32,17 @@ export default async function Icons(items: number) {
             src={data.src}
             className="w-auto h-auto mb-11"
           />
+
           <div className="sm:w-[23rem] text-center">
             <h3 className="text-lg font-bold">{data?.title}</h3>
             <p className="opacity-60 leading-6 mt-4">
               {data?.description}
             </p>
           </div>
-        </section>
+        </div>
       ))}
-    </div>
+    </>
   )
 }
+
 

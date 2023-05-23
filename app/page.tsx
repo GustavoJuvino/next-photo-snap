@@ -70,6 +70,12 @@ export default async function Home() {
     <section className="
         1xl:mx-[165px]
         lg:py-[7.5rem]
+        lg:flex
+        flex-wrap
+        lg:justify-between
+        lg:[&>*:nth-child(2)]:pt-[35.5px]  
+        max-lg:pt-6
+        max-lg:pb-20
       "
     >
       <Suspense fallback={<>Loading...</>}>

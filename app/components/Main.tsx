@@ -25,17 +25,18 @@ const Main: React.FC<MainProps> = ({
     buttonValue = ""
 }) => {
   return (
-    <section className="flex max-md:flex-col-reverse mt-7 h-[40rem]">
+    <section className="flex max-md:flex-col-reverse mt-7 md:h-[40rem] h-auto">
         <div className="
             md:w-[50rem]
-            h-[40rem]
+            h-auto
             w-[100%]
             flex
             relative
             md:justify-center
             items-center
             lg:px-40
-            mobile:px-10
+            px-10
+            max-md:py-[4.5rem]
             bg-black
             text-white
         "
@@ -62,7 +63,6 @@ const Main: React.FC<MainProps> = ({
         <div className={ responsiveImg && `
             xl:hidden
             w-full
-            h-auto
             bg-no-repeat
             bg-cover
             ${responsiveImg}
@@ -75,7 +75,8 @@ const Main: React.FC<MainProps> = ({
             alt="main-img"
             className={`
                 w-full
-                h-auto
+                md:h-auto
+                max-md:h-[300px]
                 object-cover
                 ${responsiveImg ? "max-xl:hidden" : "block"}
                 overflow-x-hidden

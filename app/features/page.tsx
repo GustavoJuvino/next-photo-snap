@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Main from "../components/Main";
+import Icons from "../components/Icons";
 
-const Features = () => {
+export default async function Features() {
+  const asyncComponent: JSX.Element = await Icons(6);
 
   return (
     <section>
@@ -15,8 +17,12 @@ const Features = () => {
         imgSrc="/assets/photographer.jpg"
         responsiveImg="md:bg-[url('/assets/tablet/photographer.jpg')]"
       />
+
+      <section>
+        <Suspense fallback={<>Loading...</>}>
+          {asyncComponent}
+        </Suspense>
+      </section>
     </section>
   )
 }
-
-export default Features;
