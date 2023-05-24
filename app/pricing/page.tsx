@@ -1,6 +1,6 @@
 import React from 'react';
 import Main from "../components/Main";
-import Prices from "../components/Prices";
+import Prices from "./Prices";
 
 const Pricing = () => {
   return (
