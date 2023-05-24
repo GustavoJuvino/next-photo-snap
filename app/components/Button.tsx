@@ -27,7 +27,10 @@ const Button: React.FC<ButtonProps> = ({
             tracking-widest 
             duration-300
             select-none
-            ${size === "xl" ? "w-[310px] h-12" : "w-40 h-10"}
+            w-40
+            h-10
+            ${size === "xl" && "w-[310px] h-12"}
+            ${size === "md" && "w-[270px] h-10"}
             ${background ? "bg-black" : "bg-white"}
             ${color === "black" ? "text-black" : "text-white"}
             ${type === 1 && `

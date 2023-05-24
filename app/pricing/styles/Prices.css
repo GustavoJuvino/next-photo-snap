@@ -1,5 +1,9 @@
 #Pro {
+    height: 470px;
     background-color: black;
     color: white;
+    border-image: linear-gradient(to right, #FEC393, #BC7198, #5A77FF) 30;
+    border-top: 6px;
+    border-style: solid;
 }
 

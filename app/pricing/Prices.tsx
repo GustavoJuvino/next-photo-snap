@@ -14,7 +14,7 @@ export default function Prices() {
                 Recommended for new and aspiring
                 photographers.
             `,
-            price: 19.00,
+            price: [19.00, 190.00],
             button: 1
         },
         {
@@ -24,7 +24,7 @@ export default function Prices() {
                 Recommended for photography
                 veterans and professionals.
             `,
-            price: 39.00,
+            price: [39.00, 390.00],
             button: 2
         },
         {
@@ -34,7 +34,7 @@ export default function Prices() {
                 more detailed metrics. Recommended
                 for business owners.
             `,
-            price: 99.00,
+            price: [99.00, 990.00],
             button: 1
         }
     ]
@@ -96,8 +96,9 @@ export default function Prices() {
         <section 
             className="
                 flex
+                items-center
                 justify-evenly
-                mt-20
+                mb-40
                 text-center
             "
         >
@@ -126,7 +127,10 @@ export default function Prices() {
                             {data.description}
                         </p>
                         <h1 className="flex flex-col text-xxl">
-                            $ {data.price.toFixed(2)}
+                            $ {!state 
+                                ? data.price[0].toFixed(2)
+                                : data.price[1].toFixed(2)
+                            }
                             <span className="
                                 text-sm
                                 tracking-normal
