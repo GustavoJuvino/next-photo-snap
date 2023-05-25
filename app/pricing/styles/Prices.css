@@ -1,9 +1,31 @@
 #Pro {
-    height: 470px;
     background-color: black;
     color: white;
-    border-image: linear-gradient(to right, #FEC393, #BC7198, #5A77FF) 30;
-    border-top: 6px;
-    border-style: solid;
 }
 
+@media only screen and (min-width: 1140px) {
+    #Pro {
+        height: 470px;
+        border-image: linear-gradient(to right, #FEC393, #BC7198, #5A77FF) 30;
+        border-top: 6px;
+        border-style: solid;
+    }
+}
+
+@media only screen and (max-width: 1140px) and (min-width: 768px){
+    #Pro {
+        height: 270px;
+        border-image: linear-gradient(to top, #FEC393, #BC7198, #5A77FF) 30;
+        border-left: 6px;
+        border-style: solid;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #Pro {
+        height: 410px;
+        border-image: linear-gradient(to right, #FEC393, #BC7198, #5A77FF) 30;
+        border-top: 6px;
+        border-style: solid;
+    }
+}

@@ -8,6 +8,12 @@ import Link from "next/link";
 const MobileMenu = () => {
   const [active, setActive] = useState(false);
 
+  const body = document.querySelector("body");
+
+  if(active) body?.classList.add("mobile-menu-body");
+  else body?.classList.remove("mobile-menu-body");
+
+
   return (
     <section>
         <div className={active ? `
@@ -47,7 +53,7 @@ const MobileMenu = () => {
         >
             {active ? (
                 <div>
-                    <ul className="flex flex-col justify-center items-center select-none">
+                    <ul className="flex flex-col justify-center items-center select-none ">
                         {headerItems.map((item) => (
                             <Link href={`/${item}`} key={item }>
                                 <li className="

@@ -43,7 +43,7 @@ export default function Prices() {
 
   return (
     <section>
-        <div className="flex justify-center mt-[120px] mb-[48px] text-lg">
+        <div className="flex justify-center mt-[120px] mb-[48px] sm:text-lg overflow-x-hidden">
             <ul className="flex">
                 <li className={`
                     px-8
@@ -60,7 +60,7 @@ export default function Prices() {
                         flex-col
                         items-start
                         justify-center
-                        mx-8
+                        md:mx-8
                         pl-1
                         w-[64px]
                         h-[32px]
@@ -96,37 +96,62 @@ export default function Prices() {
         <section 
             className="
                 flex
+                max-lg:flex-col
                 items-center
-                justify-evenly
+                lg:justify-evenly
                 mb-40
-                text-center
+                lg:text-center
             "
         >
             {signaturesData.map((data) => (
                 <div
+                    key={data.type}
                     id={data.type}
                     className={`
                         flex
-                        flex-col
+                        lg:flex-col
                         justify-center
                         items-center
-                        w-[350px]
-                        h-[400px]
-                        px-[30px]
+                        lg:w-[350px]
+                        md:w-[690px]
+                        sm:w-[320px]
+                        w-auto
+                        lg:h-[400px]
+                        md:h-[270px]
+                        h-[410px]
+                        max-lg:mt-6
+                        lg:px-[30px]
+                        sm:px-10 
                         bg-gray-100
                     `}
                 >
-                    <div>
+                    <div className="
+                        lg:block
+                        md:grid
+                        md:grid-cols-2
+                        max-md:text-center
+                    ">
                         <h2 className="text-l font-bold mb-5">
-                            {data.type}
+                                {data.type}
                         </h2>
                         <p className="
-                            opacity-60
-                            mb-[40px]
+                                opacity-60
+                                lg:mb-[40px]
+                                max-md:mb-[40px]
+                                md:mb-5
+                                max-lg:col-start-1
                         ">
                             {data.description}
                         </p>
-                        <h1 className="flex flex-col text-xxl">
+                        <h1 className="
+                            flex
+                            flex-col
+                            lg:items-center
+                            md:items-end
+                            text-xxl
+                            max-lg:col-start-2
+                            max-lg:row-start-1
+                        ">
                             $ {!state 
                                 ? data.price[0].toFixed(2)
                                 : data.price[1].toFixed(2)
@@ -141,16 +166,20 @@ export default function Prices() {
                                 per month
                             </span>
                         </h1>
-                    </div>
-
-                    <div className="mt-10 hover:text-purple-500">
-                        <Button 
-                            type={1}
-                            value="PICK PLAN"
-                            color={data.button === 1 ? "white" : "black"}
-                            size="md"
-                            background={data.button === 1 ? true : false}
-                        />
+                        <div className="
+                            lg:mt-10
+                            max-md:mt-10
+                            max-lg:col-start-1
+                            hover:text-purple-500
+                        ">
+                            <Button 
+                                type={1}
+                                value="PICK PLAN"
+                                color={data.button === 1 ? "white" : "black"}
+                                size="md"
+                                background={data.button === 1 ? true : false}
+                            />
+                        </div>
                     </div>
                 </div>
             ))}
