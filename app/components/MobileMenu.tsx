@@ -8,7 +8,7 @@ import Link from "next/link";
 const MobileMenu = () => {
   const [active, setActive] = useState(false);
 
-  const body = document.querySelector("body");
+  const body = document?.querySelector("body");
 
   if(active) body?.classList.add("mobile-menu-body");
   else body?.classList.remove("mobile-menu-body");

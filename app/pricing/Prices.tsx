@@ -163,7 +163,7 @@ export default function Prices() {
                                 opacity-60
                             "
                             >
-                                per month
+                                {state ? "per year" : "per month"}
                             </span>
                         </h1>
                         <div className="
