@@ -2,6 +2,7 @@ import React from 'react';
 import Main from "../components/Main";
 import Prices from "./Prices";
 import Compare from "./Compare";
+import Beta from "../components/Beta";
 
 const Pricing = () => {
   return (
@@ -19,6 +20,7 @@ const Pricing = () => {
 
         <Prices />
         <Compare />
+        <Beta />
     </section>
   )
 }

@@ -40,13 +40,15 @@ const featuresPlans = ["BASIC", "PRO", "BUSINESS"]
 
 const Compare = () => {
   return (
-    <section className="
-        flex
-        flex-col
-        justify-center
-        items-center
-        mb-[160px]
-    ">
+    <section 
+        className="
+            flex
+            flex-col
+            justify-center
+            items-center
+            mb-[160px]
+        "
+    >
         <h1 className="mb-14 text-xxl">
             COMPARE
         </h1>
@@ -66,37 +68,42 @@ const Compare = () => {
                 {tableData.map((data) => (
                     <tr className="">
                         <td className="
-                            font-bold
-                            text-start
-                            tracking-[2px]
-                            md:pl-[24px]
-                            py-[24px]
-                            max-md:pb-8
-                        ">
+                                font-bold
+                                text-start
+                                tracking-[2px]
+                                md:pl-[24px]
+                                py-[24px]
+                                max-md:pb-8
+                            "
+                        >
                             {data.feature}
                             <div className="
-                                md:hidden
-                                flex
-                                justify-between
-                                pt-4
-                                text-opacity-50
-                                text-black
-                                text-sm
-                            ">
+                                    md:hidden
+                                    flex
+                                    justify-between
+                                    pt-4
+                                    text-opacity-50
+                                    text-black
+                                    text-sm
+                                "
+                            >
                                 {featuresPlans.map((plan) => (
-                                    <div className="flex flex-col">
+                                    <div 
+                                        key={plan}
+                                        className="flex flex-col"
+                                    >
                                         <p>{plan}</p>
                                         {data.plans?.map((data_plan) => (
-                                            data_plan === plan ? <div id="tick-mark"/> : "" 
+                                            data_plan === plan ? <div key={data_plan} id="tick-mark"/> : "" 
                                         ))}
                                     </div>
                                 ))}
                             </div>
                         </td>
 
-                        {data.plans?.map((plan) => (
+                        {data.plans?.map((data_plan) => (
                             <td className="max-md:hidden">
-                                {plan ? <div id="tick-mark"/> : ""} 
+                                {data_plan ? <div id="tick-mark"/> : ""} 
                             </td>
                         ))}
                     </tr>
@@ -107,4 +114,4 @@ const Compare = () => {
   )
 }
 
-export default Compare
+export default Compare;
