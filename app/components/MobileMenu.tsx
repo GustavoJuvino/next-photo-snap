@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { headerItems } from "./Header";
 import styles from "./styles/MobileMenu.module.css";
 import Button from "./Button";
@@ -8,11 +8,13 @@ import Link from "next/link";
 const MobileMenu = () => {
   const [active, setActive] = useState(false);
 
-  const body = document?.querySelector("body");
+  let body;
 
-  if(active) body?.classList.add("mobile-menu-body");
-  else body?.classList.remove("mobile-menu-body");
-
+  useEffect(() => {
+    body = document?.querySelector("body");
+    if(active) body?.classList.add("mobile-menu-body");
+    else body?.classList.remove("mobile-menu-body");
+  }, [body, active])
 
   return (
     <section>

@@ -4,53 +4,39 @@ import "./styles/Compare.css";
 const tableData = [
     {
         feature: "UNLIMITED STORY POSTING",
-        basic: true,
-        pro: true,
-        business: true,
+        plans: [ "BASIC", "PRO", "BUSINESS"]
     },
     {
         feature: "UNLIMITED PHOTO UPLOAD",
-        basic: true,
-        pro: true,
-        business: true,
+        plans: [ "BASIC", "PRO", "BUSINESS"]
     },
     {
         feature: "EMBEDDING CUSTOM CONTENT",
-        basic: false,
-        pro: true,
-        business: true,
+        plans: [ "", "PRO", "BUSINESS"]
     },
     {
         feature: "CUSTOMIZE METADATA",
-        basic: false,
-        pro: true,
-        business: true,
+        plans: [ "", "PRO", "BUSINESS"]
     },
     {
         feature: "ADVANCED METRICS",
-        basic: false,
-        pro: false,
-        business: true,
+        plans: [ "", "", "BUSINESS"]
     },
     {
         feature: "PHOTO DOWNLOADS",
-        basic: false,
-        pro: false,
-        business: true,
+        plans: [ "", "", "BUSINESS"]
     },
     {
         feature: "SEARCH ENGINE INDEXING",
-        basic: false,
-        pro: false,
-        business: true,
+        plans: [ "", "", "BUSINESS"]
     },
     {
         feature: "CUSTOM ANALYTICS",
-        basic: false,
-        pro: false,
-        business: true,
+        plans: [ "", "", "BUSINESS"]
     },
 ]
+
+const featuresPlans = ["BASIC", "PRO", "BUSINESS"]
 
 const Compare = () => {
   return (
@@ -64,39 +50,55 @@ const Compare = () => {
         <h1 className="mb-14 text-xxl">
             COMPARE
         </h1>
-        <table>
+        <table className="sm:mx-8 mx-2">
             <thead>
                 <tr>
-                    <th className="text-start pl-[24px] w-[320px]">
+                    <th className="text-start md:pl-[24px] w-[320px]">
                         THE FEATURES
                     </th>
-                    <th>BASIC</th>
-                    <th>PRO</th>
-                    <th>BUSINESS</th>
+                    {featuresPlans.map((plan) => (
+                        <th className="max-md:hidden">{plan}</th> 
+                    ))}
                 </tr>
             </thead>
 
             <tbody className="text-center">
                 {tableData.map((data) => (
-                    <tr>
+                    <tr className="">
                         <td className="
                             font-bold
                             text-start
                             tracking-[2px]
-                            pl-[24px]
+                            md:pl-[24px]
                             py-[24px]
+                            max-md:pb-8
                         ">
                             {data.feature}
+                            <div className="
+                                md:hidden
+                                flex
+                                justify-between
+                                pt-4
+                                text-opacity-50
+                                text-black
+                                text-sm
+                            ">
+                                {featuresPlans.map((plan) => (
+                                    <div className="flex flex-col">
+                                        <p>{plan}</p>
+                                        {data.plans?.map((data_plan) => (
+                                            data_plan === plan ? <div id="tick-mark"/> : "" 
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
                         </td>
-                        <td>
-                            {data.basic ? <div id="tick-mark"/> : ""}
-                        </td>
-                        <td>
-                            {data.pro ? <div id="tick-mark"/> : ""}
-                        </td>
-                        <td>
-                            {data.business ? <div id="tick-mark"/> : ""}
-                        </td>
+
+                        {data.plans?.map((plan) => (
+                            <td className="max-md:hidden">
+                                {plan ? <div id="tick-mark"/> : ""} 
+                            </td>
+                        ))}
                     </tr>
                 ))}
             </tbody>
