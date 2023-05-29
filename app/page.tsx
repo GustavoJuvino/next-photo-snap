@@ -3,10 +3,14 @@ import Content from "./components/Content";
 import Card from "./components/Card";
 import Icons from "./components/Icons";
 import { Suspense } from "react";
-import { getData } from "./helper/fetchData";
+
+async function getData() {
+  const res = await import("./api/json/route");
+  return await (await res.GET()).json();
+}
 
 export default async function Home() {
-  const data = await getData("http://localhost:3000/api/json");
+  const data = await getData();
   const asyncComponent: JSX.Element = await Icons(3, "sm");
 
   return (

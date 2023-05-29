@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import Main from "../components/Main";
 import Icons from "../components/Icons";
 import Beta from "../components/Beta";

@@ -2,15 +2,20 @@ import React from 'react'
 import Button from "../components/Button";
 import Image from "next/image";
 import Card from "../components/Card";
-import { getData } from "../helper/fetchData";
 import styles from "./styles/Stories.module.css";
 
 export const metadata = {
   title: "Stories"
 }
 
+async function getData() {
+  const res = await import("../api/json/route");
+
+  return await (await res.GET()).json();
+}
+
 export default async function Stories() {
-  const data = await getData("http://localhost:3000/api/json");
+  const data = await getData();
 
   return (
     <main>
