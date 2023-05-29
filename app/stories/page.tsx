@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import Image from "next/image";
 import Card from "../components/Card";
 import { getData } from "../helper/fetchData";
+import styles from "./styles/Stories.module.css";
 
 export default async function Stories() {
   const data = await getData("http://localhost:3000/api/json");
@@ -15,6 +16,7 @@ export default async function Stories() {
           mt-7
           text-white
           items-center
+          relative
         "
       >
         <div className="
@@ -25,7 +27,7 @@ export default async function Stories() {
             mobile:pl-10
             max-md:h-[100%]
             max-md:w-[100%]
-            md:z-30
+            md:z-50
             max-md:bg-black
             flex
             flex-col
@@ -53,12 +55,12 @@ export default async function Stories() {
             while the ridges are not high, the terrain is extremely
             rugged.
           </p>
-          <div className="max-md:pb-12">
+          <div className={`${styles.customHover} max-md:pb-12`}>
             <Button 
               type={2}
-              value="READ THE STORY"
-              color="white"
+              value={"GET AN INVITE"}
               background={true}
+              color="white"
             />
           </div>
         </div>

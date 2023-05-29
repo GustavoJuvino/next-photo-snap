@@ -1,0 +1,20 @@
+.customHover:hover:before{
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 400px;
+    background: radial-gradient(ellipse at bottom left, #FFC593 20%, #BC7198, #5A77FF);
+    top: 42%;
+    left: 0px;
+    filter: blur(50px);
+    opacity: 50%;
+    border-top-right-radius: 100%;
+    animation-name: hoverEffect;
+    animation-duration: 0.8s;
+    z-index: -1;
+}
+
+@keyframes hoverEffect {
+    from {opacity: 0};
+    to {opacity: 50%;}
+}

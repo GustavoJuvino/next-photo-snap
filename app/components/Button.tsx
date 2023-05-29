@@ -29,6 +29,7 @@ const Button: React.FC<ButtonProps> = ({
             select-none
             w-40
             h-10
+            cursor-pointer
             ${size === "xl" && "w-[310px] h-12"}
             ${size === "md" && "w-[270px] h-10"}
             ${background ? "bg-black" : "bg-white"}
