@@ -48,6 +48,7 @@ export default async function Icons(items: number, width: string) {
             height={72}
             alt="img-icon"
             src={data.src}
+            blurDataURL={data.src}
             className="w-auto h-auto my-11"
           />
 

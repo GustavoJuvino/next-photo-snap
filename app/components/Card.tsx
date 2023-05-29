@@ -36,6 +36,8 @@ const Card: React.FC<CardProps> = ({
                     height={600}
                     alt="card-img"
                     src={imgSrc}
+                    blurDataURL={imgSrc}
+                    placeholder="blur"
                     className="
                         w-[100%]
                         h-[34rem]
@@ -75,6 +77,7 @@ const Card: React.FC<CardProps> = ({
                             height={12}
                             alt="Arrow"
                             src={"assets/arrow-white.svg"}
+                            blurDataURL={"assets/arrow-white.svg"}
                         />
                     </div>
                 </div>

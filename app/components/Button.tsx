@@ -58,6 +58,8 @@ const Button: React.FC<ButtonProps> = ({
                     height={12}
                     alt="Arrow"
                     src={color === "black" ? "assets/arrow-black.svg" : "assets/arrow-white.svg"}
+                    blurDataURL={color === "black" ? "assets/arrow-black.svg" : "assets/arrow-white.svg"}
+                    placeholder="blur"
                 />
             </div>
         ) : 

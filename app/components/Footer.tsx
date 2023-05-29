@@ -37,6 +37,8 @@ const Footer = () => {
         <Link href="/">
           <Image
             src={"assets/logo-white.svg"}
+            blurDataURL={"assets/logo-white.svg"}
+            placeholder="blur"
             width={170}
             height={16}
             alt="Logo"
@@ -91,6 +93,7 @@ const Footer = () => {
               <Image
                 id="social-media-icon"
                 src={`assets/${icon}`}
+                blurDataURL={`assets/${icon}`}
                 width={20}
                 height={20}
                 alt="Social Media Icon"

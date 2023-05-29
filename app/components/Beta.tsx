@@ -58,6 +58,8 @@ const Beta = () => {
             height={280}
             alt="Invite-Background"
             src="/assets/bg-beta.jpg"
+            placeholder="blur"
+            blurDataURL={"/assets/bg-beta.jpg"}
             className="
                 w-screen
                 h-[280px]

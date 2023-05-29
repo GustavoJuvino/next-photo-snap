@@ -89,6 +89,8 @@ export default async function Stories() {
           width={1920}
           height={650}
           src="/assets/moon-of-appalacia.jpg"
+          blurDataURL="/assets/moon-of-appalacia.jpg"
+          placeholder="blur"
           alt="moon-of-appalacia"
           className="
             w-screen

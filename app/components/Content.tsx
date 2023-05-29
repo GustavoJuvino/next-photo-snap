@@ -22,6 +22,8 @@ const Content: React.FC<ContentProps> = ({
           width={830}
           height={600}
           src={imgSrc}
+          blurDataURL={imgSrc}
+          placeholder="blur"
           alt="beautiful-stories"
           className="                
             lg:w-[54%]

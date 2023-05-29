@@ -71,8 +71,9 @@ const Main: React.FC<MainProps> = ({
             width={850}
             height={650}
             src={imgSrc}
+            blurDataURL={imgSrc}
             alt="main-img"
-            priority={true}
+            placeholder="blur"
             className={`
                 w-full
                 md:h-auto

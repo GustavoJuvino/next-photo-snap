@@ -22,10 +22,11 @@ const Header = () => {
           <Link href="/">
             <Image
               src={"assets/logo.svg"}
+              blurDataURL={"assets/logo.svg"}
+              placeholder="blur"
               width={170}
               height={16}
               alt="Logo"
-              priority={true}
               className="mobile:w-auto w-[100px] h-auto cursor-pointer"
             />
           </Link>
