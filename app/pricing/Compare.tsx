@@ -58,14 +58,14 @@ const Compare = () => {
                         THE FEATURES
                     </th>
                     {featuresPlans.map((plan) => (
-                        <th className="max-md:hidden">{plan}</th> 
+                        <th key={plan} className="max-md:hidden">{plan}</th> 
                     ))}
                 </tr>
             </thead>
 
             <tbody className="text-center">
                 {tableData.map((data) => (
-                    <tr className="">
+                    <tr key={data.feature} className="">
                         <td className="
                                 font-bold
                                 text-start

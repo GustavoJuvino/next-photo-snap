@@ -105,9 +105,10 @@ export default async function Stories() {
           <div 
             key={data.id}
             className="
-                hover:translate-y-[-24px]
-                duration-300 z-50
-              "
+              hover:translate-y-[-24px]
+              duration-300
+              z-50
+            "
             >
             <Card 
               title={data.title}
