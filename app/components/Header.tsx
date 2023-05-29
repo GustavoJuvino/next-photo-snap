@@ -32,7 +32,7 @@ const Header = () => {
         </div>
         <ul className="hidden md:flex font-bold tracking-widest text-sm">
           {headerItems.map((item) => (
-            <Link href={`/${item}`} >
+            <Link key={item} href={`/${item}`} >
               <li className="
                   mx-6
                   cursor-pointer

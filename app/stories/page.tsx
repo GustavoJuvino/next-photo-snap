@@ -102,9 +102,14 @@ export default async function Stories() {
       {/* Cards */}
       <section className="grid lg:grid-cols-4 sm:grid-cols-2">
         {data?.map((data: dataProps) => (
-          <div className="hover:translate-y-[-24px] duration-300 z-50">
+          <div 
+            key={data.id}
+            className="
+                hover:translate-y-[-24px]
+                duration-300 z-50
+              "
+            >
             <Card 
-              key={data.id}
               title={data.title}
               author={data.author}
               imgSrc={data.src}

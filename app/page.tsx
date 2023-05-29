@@ -51,14 +51,14 @@ export default async function Home() {
       "
     >
       {data?.slice(0, 4).map((data: dataProps) => (
-        <div className="                
+        <div key={data.id}
+          className="                
             duration-300
             lg:hover:translate-y-[-6rem]
             hover:translate-y-[-20px]
           "
         >
           <Card 
-            key={data.id}
             title={data.title}
             author={data.author}
             imgSrc={data.src}

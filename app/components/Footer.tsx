@@ -56,7 +56,7 @@ const Footer = () => {
           "
         >
           {footerItems.map((item) => (
-            <Link href={item === "home" ? "/" : `/${item}`}>
+            <Link key={item} href={item === "home" ? "/" : `/${item}`}>
               <li className="
                   text-sm
                   text-white
@@ -87,7 +87,7 @@ const Footer = () => {
           "
         >
           {socialMedias.map((icon) => (
-            <li className="md:pr-3">
+            <li key={icon} className="md:pr-3">
               <Image
                 id="social-media-icon"
                 src={`assets/${icon}`}

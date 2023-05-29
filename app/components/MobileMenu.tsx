@@ -64,7 +64,7 @@ const MobileMenu = () => {
                         "
                     >
                         {headerItems.map((item) => (
-                            <Link href={`/${item}`} key={item }>
+                            <Link href={`/${item}`} key={item}>
                                 <li className="
                                         font-bold
                                         tracking-widest

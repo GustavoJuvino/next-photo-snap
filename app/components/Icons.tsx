@@ -42,7 +42,7 @@ export default async function Icons(items: number, width: string) {
       `}
     >
       {data?.slice(0, items).map((data: dataIconsProps) => (
-        <div className="flex flex-col items-center">
+        <div key={data.title} className="flex flex-col items-center">
           <Image 
             width={72}
             height={72}
