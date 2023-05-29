@@ -16,7 +16,13 @@ const Gradient: React.FC<GradientProps> = ({ size, responsible }) => {
         ${size === "sm" && "h-36"}
         ${size === "md" && "h-[280px]"}
         ${size === "xl" && "h-[19rem]"}
-        ${responsible && "max-md:w-32 max-md:h-[6px] max-md:top-0 max-md:mx-10 max-mobile:mx-0"}
+        ${responsible && `
+          max-md:w-32
+          max-md:h-[6px]
+          max-md:top-0
+          max-md:mx-10
+          max-mobile:mx-0
+        `}
       `}
     />
   )

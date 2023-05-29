@@ -11,6 +11,7 @@
     border-top-right-radius: 100%;
     animation-name: hoverEffect;
     animation-duration: 0.8s;
+    animation-timing-function: ease;
     z-index: -1;
 }
 

@@ -40,8 +40,7 @@ const featuresPlans = ["BASIC", "PRO", "BUSINESS"]
 
 const Compare = () => {
   return (
-    <section 
-        className="
+    <section className="
             flex
             flex-col
             justify-center
@@ -94,7 +93,9 @@ const Compare = () => {
                                     >
                                         <p>{plan}</p>
                                         {data.plans?.map((data_plan) => (
-                                            data_plan === plan ? <div key={data_plan} id="tick-mark"/> : "" 
+                                            data_plan === plan 
+                                                ? <div key={data_plan} id="tick-mark"/> 
+                                                : "" 
                                         ))}
                                     </div>
                                 ))}

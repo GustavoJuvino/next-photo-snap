@@ -19,14 +19,14 @@ const MobileMenu = () => {
   return (
     <section>
         <div className={active ? `
-            absolute
-            max-md:top-[97px]
-            max-md:left-0
-            max-md:z-[80]
-            max-md:w-full
-            max-md:h-screen
-            bg-black
-            bg-opacity-50
+                absolute
+                max-md:top-[97px]
+                max-md:left-0
+                max-md:z-[80]
+                max-md:w-full
+                max-md:h-screen
+                bg-black
+                bg-opacity-50
             `
          : ""}></div>
          
@@ -55,7 +55,14 @@ const MobileMenu = () => {
         >
             {active ? (
                 <div>
-                    <ul className="flex flex-col justify-center items-center select-none ">
+                    <ul className="
+                            flex
+                            flex-col
+                            justify-center
+                            items-center
+                            select-none
+                        "
+                    >
                         {headerItems.map((item) => (
                             <Link href={`/${item}`} key={item }>
                                 <li className="
@@ -75,15 +82,16 @@ const MobileMenu = () => {
                         <hr className="w-[310px] my-5"/>
                     </div>
                     <div className="
-                        flex
-                        justify-center
-                        mt-5
-                    ">
+                            flex
+                            justify-center
+                            mt-5
+                        "
+                    >
                         <Button 
                             type={1}
                             value="GET AN INVITE"
                             color="white"
-                            background={true}
+                            background="black"
                             size="xl"
                         />
                     </div>

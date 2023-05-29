@@ -6,7 +6,6 @@ import Link from "next/link";
 export let headerItems = ["stories", "features", "pricing"];
 
 const Header = () => {
-
   return (
     <div className="
         flex
@@ -50,7 +49,7 @@ const Header = () => {
         type={1}
         value="GET AN INVITE"
         color="white"
-        background={true}
+        background="black"
         responsive="md"
       />
       
@@ -59,4 +58,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header;

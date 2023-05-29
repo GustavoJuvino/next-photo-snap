@@ -36,19 +36,24 @@ const Card: React.FC<CardProps> = ({
                     height={600}
                     alt="card-img"
                     src={imgSrc}
-                    className="w-[100%] h-[34rem] object-cover mix-blend-multiply"
+                    className="
+                        w-[100%]
+                        h-[34rem]
+                        object-cover
+                        mix-blend-multiply
+                    "
                 />
             </div>
             <div className={`
                     row-start-1
                     col-start-1
-                    z-10
                     flex
                     flex-col
                     justify-end
+                    text-white
                     mobile:px-10
                     py-10
-                    text-white
+                    z-10
                     ${styles.textContainer}
                 `}
             >

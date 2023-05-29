@@ -5,6 +5,10 @@ import Card from "../components/Card";
 import { getData } from "../helper/fetchData";
 import styles from "./styles/Stories.module.css";
 
+export const metadata = {
+  title: "Stories"
+}
+
 export default async function Stories() {
   const data = await getData("http://localhost:3000/api/json");
 
@@ -59,10 +63,9 @@ export default async function Stories() {
             <Button 
               type={2}
               value={"GET AN INVITE"}
-              background={true}
               color="white"
             />
-          </div>
+          </div >
         </div>
 
         {/* Background */}
@@ -76,7 +79,7 @@ export default async function Stories() {
             h-[315px]
             z-10
           "
-        ></div>
+        />
         <Image
           width={1920}
           height={650}

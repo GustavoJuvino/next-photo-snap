@@ -6,7 +6,7 @@ interface ButtonProps {
     type: number;
     size?: string;
     color: string;
-    background?: boolean;
+    background?: string;
     responsive?: string;
 }
 
@@ -22,31 +22,31 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button 
         className={`
+            w-40
+            h-10
             text-xs
             font-bold
             tracking-widest 
-            duration-300
             select-none
-            w-40
-            h-10
             cursor-pointer
+            duration-300
             ${size === "xl" && "w-[310px] h-12"}
             ${size === "md" && "w-[270px] h-10"}
-            ${background ? "bg-black" : "bg-white"}
             ${color === "black" ? "text-black" : "text-white"}
+            ${responsive === "md" && `md:block hidden`}
             ${type === 1 && `
                 hover:bg-light-gray
                 hover:text-black
+                ${background === "black" ? "bg-black" : "bg-white"}
             `}
             ${type === 2 && `
                 w-52
                 h-auto
-                bg-transparent
                 text-left
+                bg-transparent
                 hover:bg-transparent
                 hover:underline
             `}
-            ${responsive === "md" && `md:block hidden`}
         `}
     >
         {type === 2 ? (

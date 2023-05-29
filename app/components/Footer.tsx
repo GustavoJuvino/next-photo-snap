@@ -106,7 +106,6 @@ const Footer = () => {
           <Button 
             type={2}
             value={"GET AN INVITE"}
-            background={true}
             color="white"
           />
         </div>

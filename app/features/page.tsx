@@ -3,6 +3,10 @@ import Main from "../components/Main";
 import Icons from "../components/Icons";
 import Beta from "../components/Beta";
 
+export const metadata = {
+  title: "Features"
+}
+
 export default async function Features() {
   const asyncComponent: JSX.Element = await Icons(6, "xl");
 

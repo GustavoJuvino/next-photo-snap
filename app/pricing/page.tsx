@@ -4,6 +4,10 @@ import Prices from "./Prices";
 import Compare from "./Compare";
 import Beta from "../components/Beta";
 
+export const metadata = {
+  title: "Pricing"
+}
+
 const Pricing = () => {
   return (
     <section>

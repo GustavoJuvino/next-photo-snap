@@ -11,15 +11,15 @@ interface ContentProps {
 }
 
 const Content: React.FC<ContentProps> = ({
-    type,
-    title,
-    content,
-    imgSrc,
+  type,
+  title,
+  content,
+  imgSrc,
 }) => {
   return (
     <section className={`md:flex block ${type === 2 && `flex-row-reverse`}`}> 
         <Image 
-          width={980}
+          width={830}
           height={600}
           src={imgSrc}
           alt="beautiful-stories"

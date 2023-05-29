@@ -43,7 +43,15 @@ export default function Prices() {
 
   return (
     <section>
-        <div className="flex justify-center mt-[120px] mb-[48px] sm:text-lg overflow-x-hidden">
+        <div className="
+                flex
+                justify-center
+                mt-[7.5rem]
+                mb-12
+                sm:text-lg
+                overflow-x-hidden
+            "
+        >
             <ul className="flex">
                 <li className={`
                     px-8
@@ -62,8 +70,8 @@ export default function Prices() {
                         justify-center
                         md:mx-8
                         pl-1
-                        w-[64px]
-                        h-[32px]
+                        w-16
+                        h-8
                         rounded-2xl
                         cursor-pointer
                         duration-300
@@ -177,7 +185,7 @@ export default function Prices() {
                                 value="PICK PLAN"
                                 color={data.button === 1 ? "white" : "black"}
                                 size="md"
-                                background={data.button === 1 ? true : false}
+                                background={data.button === 1 ? "black" : "white"}
                             />
                         </div>
                     </div>

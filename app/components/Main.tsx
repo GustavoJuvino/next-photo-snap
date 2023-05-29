@@ -27,19 +27,19 @@ const Main: React.FC<MainProps> = ({
   return (
     <section className="flex max-md:flex-col-reverse mt-7 md:h-[40rem] h-auto">
         <div className="
-            md:w-[50rem]
-            h-auto
-            w-[100%]
-            flex
-            relative
-            md:justify-center
-            items-center
-            lg:px-40
-            mobile:px-10
-            max-md:py-[4.5rem]
-            bg-black
-            text-white
-        "
+                md:w-[50rem]
+                h-auto
+                w-[100%]
+                flex
+                relative
+                md:justify-center
+                items-center
+                lg:px-40
+                mobile:px-10
+                max-md:py-[4.5rem]
+                bg-black
+                text-white
+            "
         >
             <div className="text-left w-[400px]">
                 <Gradient size={gradientSize} responsible={true} />
@@ -54,7 +54,6 @@ const Main: React.FC<MainProps> = ({
                         type={2}
                         value={buttonValue}
                         color="white"
-                        background={true}
                     />
                 )}
             </div>
@@ -73,6 +72,7 @@ const Main: React.FC<MainProps> = ({
             height={650}
             src={imgSrc}
             alt="main-img"
+            priority={true}
             className={`
                 w-full
                 md:h-auto
@@ -88,4 +88,4 @@ const Main: React.FC<MainProps> = ({
   )
 }
 
-export default Main
+export default Main;

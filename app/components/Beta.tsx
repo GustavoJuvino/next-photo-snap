@@ -6,26 +6,28 @@ import Image from "next/image";
 const Beta = () => {
   return (
     <section className="
-        w-full
-        h-[280px]
-        grid
-        grid-cols-1
-        relative
-    ">
+            w-full
+            h-[280px]
+            grid
+            grid-cols-1
+            relative
+        "
+    >
         <Gradient size="md" responsible={true} />
         <div className="
-            flex
-            max-md:flex-col
-            md:justify-between
-            justify-center
-            md:items-center
-            lg:px-[165px]
-            md:px-6
-            mobile:px-10
-            col-start-1
-            row-start-1
-            z-30
-        ">
+                flex
+                max-md:flex-col
+                md:justify-between
+                justify-center
+                md:items-center
+                lg:px-[165px]
+                md:px-6
+                mobile:px-10
+                col-start-1
+                row-start-1
+                z-30
+            "
+        >
             <div>
                 <h1 className="sm:text-xxl text-l text-white">
                     WE'RE IN BETA.<br />
@@ -38,19 +40,19 @@ const Beta = () => {
                 type={2}
                 value="GET AN INVITE"
                 color="white"
-                background={true}
                 />
             </div>
         </div>
 
         <div className="              
-            col-start-1
-            row-start-1
-            bg-black
-            opacity-20
-            w-[100%]
-            z-10
-        "/>
+                col-start-1
+                row-start-1
+                bg-black
+                opacity-20
+                w-[100%]
+                z-10
+            "
+        />
         <Image 
             width={1920}
             height={280}
