@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Main from "../components/Main";
 import Icons from "../components/Icons";
 import Beta from "../components/Beta";
@@ -25,9 +25,9 @@ export default async function Features() {
       />
 
       {/* Icons */}
-      <section>
+      <Suspense fallback={<>Loading...</>}>
         {asyncComponent}
-      </section>
+      </Suspense>
 
       <Beta />
     </section>

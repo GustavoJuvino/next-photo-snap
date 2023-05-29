@@ -2,13 +2,13 @@ import Image from "next/image";
 import React from 'react';
 
 async function getData() {
-    const res = await fetch("http://localhost:3000/api/json/icons-data", { next: { revalidate: 60 } });
+    const res = await import("../api/json/icons-data/route");
   
-    if (!res.ok) {
+    if (!res) {
       throw new Error('Failed to fetch data');
     }
   
-    return res.json();
+    return await (await res.GET()).json();
    
   }
 
