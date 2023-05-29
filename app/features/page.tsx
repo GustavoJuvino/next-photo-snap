@@ -26,9 +26,7 @@ export default async function Features() {
 
       {/* Icons */}
       <section>
-        <Suspense fallback={<>Loading...</>}>
-          {asyncComponent}
-        </Suspense>
+        {asyncComponent}
       </section>
 
       <Beta />
