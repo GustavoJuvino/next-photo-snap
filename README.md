@@ -1,4 +1,4 @@
-<h1 align="center">Photo Snap</h1>
+<h1 align="center">Photo Snap 📷🌆</h1>
 
 <h4 align="center">
     This project is a challenge that I took from <a href="https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW">frontendmentor.io </a><br>which consists of building a
