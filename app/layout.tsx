@@ -5,8 +5,8 @@ import Footer from "./components/Footer";
 
 export const metadata = {
   title: {
-    default: "Photo Snap",
-    template: "%s | Photo Snap"
+    default: "Photosnap",
+    template: "%s | Photosnap"
   },
   description: 'Photosnap is a platform forphotographers and visual storytellers',
 }
