@@ -18,18 +18,6 @@ const MobileMenu = () => {
 
   return (
     <section>
-        <div className={active ? `
-                absolute
-                max-md:top-[97px]
-                max-md:left-0
-                max-md:z-[80]
-                max-md:w-full
-                max-md:h-screen
-                bg-black
-                bg-opacity-50
-            `
-         : ""}></div>
-         
         <div className={styles.mobileButton}>
             <span 
                 id={styles.hamburger} 
