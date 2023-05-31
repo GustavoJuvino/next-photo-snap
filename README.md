@@ -1,4 +1,4 @@
-<h1 align="center">Photo Snap</h1>
+<h1 align="center">Photo Snap 📷🌆</h1>
 
 <h4 align="center">
     This project is a challenge that I took from <a href="https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW">frontendmentor.io </a><br>which consists of building a
@@ -20,7 +20,7 @@
     <img src="https://www.svgrepo.com/show/493719/react-javascript-js-framework-facebook.svg" width=60px height=60px alt="React"/>
     <img src="https://www.svgrepo.com/show/342062/next-js.svg" width=60px height=60px alt="Next"/>
     <img src="https://www.svgrepo.com/show/374146/typescript-official.svg"  width=60px height=60px alt="TypeScript"/>
-    <img src=" https://www.svgrepo.com/show/374118/tailwind.svg"  width=60px height=60px alt="Tailwind CSS"/>
+    <img src="https://www.svgrepo.com/show/374118/tailwind.svg"  width=60px height=60px alt="Tailwind CSS"/>
  </div>
 
 <br><br>
